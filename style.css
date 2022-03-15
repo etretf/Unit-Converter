@@ -16,20 +16,20 @@ h2 {
 }
 
 nav {
-    position: absolute;
-    z-index: 999;
-    background-color: white;
+    background-color: #FC4F1B;
     width: 100%;
-    text-align: center;
     height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-nav a {
-    height: 30%;
-    background-color: blue;
+nav img {
+    height: 50px;
     margin: auto;
 }
 
+/*Homepage styling*/
 .banner {
     width: 100%;
     height: 100vh;
@@ -89,7 +89,7 @@ nav a {
     text-align: center;
     margin: 30px 0;
     padding: 40px ;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: white;
     color: #CB3B24;
     font-weight: bold;
@@ -116,4 +116,80 @@ nav a {
 
 .github-logo {
     width: 50px;
+}
+
+/*Converter page styling*/
+.converters-nav {
+    height: 125px;
+    background-color: #222831;
+    color: white;
+    width: 100%;
+}
+
+.nav-converter-links {
+    width: 78%;
+    margin: auto;
+    height: 100%;
+    background-color: #F7B132;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-converter-link {
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.nav-converter-link img {
+    height: 60px;
+}
+
+.nav-converter-link p {
+    margin: 10px;
+}
+
+.converter-section {
+    background-color: #F2F2F2;
+}
+
+.converter-box {
+    width: 60%;
+    max-width: 810px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.unit-type {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    
+}
+
+.unit-type h3 {
+    width: 100%;
+}
+
+.input-field {
+    width: 90%;
+    outline-style: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    padding-bottom: 0;
+    height: 40px;
+}
+
+.unit-type p {
+    width: 10%;
+    height: 40px;
+    text-align: center;
+    font-size: 18pt;
 }
