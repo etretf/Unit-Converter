@@ -31,7 +31,7 @@ function checks() {
             console.log(inpuValue);
             break;
         case "kilograms":
-            grams.value = (inpuValue*1000).toFixed(decimalNum);
+            grams.value = (inpuValue*1000).toFixed(2);
             tons.value = inpuValue*0.001102;
             pounds.value = inpuValue*2.204623;
             ounces.value = inpuValue*35.27396;
@@ -47,6 +47,16 @@ function checks() {
         case "ounces":
             console.log("ounces");
             break;
+    }
+}
+
+
+function reset() {
+    
+    var numInputs = document.getElementsByClassName("input")
+
+    for(i=0;i<numInputs.length;i++) {
+        numInputs[i].value = "";
     }
 }
 /*
