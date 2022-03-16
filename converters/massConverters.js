@@ -1,3 +1,4 @@
+//mass page values
 var grams = document.getElementById("grams");
 var kilograms = document.getElementById("kilograms");
 var tons = document.getElementById("tons");
@@ -7,64 +8,72 @@ var ounces = document.getElementById("ounces");
 
 //var inputs = document.getElementsByClassName("input");
 
-console.log(grams);
 
 //var posibleInputs = document.getElementsByClassName("input")
 //document.getElementById("kilograms").addEventListener("input", kale);
 
-document.getElementById("grams").addEventListener("input", checks);
-document.getElementById("kilograms").addEventListener("input", checks);
-document.getElementById("tons").addEventListener("input", checks);
-document.getElementById("pounds").addEventListener("input", checks);
-document.getElementById("ounces").addEventListener("input", checks);
+//Mass Page
+document.getElementById("grams").addEventListener("input", mass);
+document.getElementById("kilograms").addEventListener("input", mass);
+document.getElementById("tons").addEventListener("input", mass);
+document.getElementById("pounds").addEventListener("input", mass);
+document.getElementById("ounces").addEventListener("input", mass);
 
-function checks() {
-    console.log("hello");
+
+function mass() {
+    console.log("mass");
     inputId = event.target.id;
-    inpuValue = parseFloat(event.target.value);
+    inputValue = parseFloat(event.target.value);
     switch(inputId) {
         case "grams":
-            kilograms.value = inpuValue/1000;
-            tons.value = inpuValue*1.1023e-6;
-            pounds.value = inpuValue*0.002204623;
-            ounces.value = inpuValue*0.03527396;
-            console.log(inpuValue);
+            console.log("grams");
+            kilograms.value = inputValue/1000;
+            tons.value = inputValue*1.1023e-6;
+            pounds.value = inputValue*0.002204623;
+            ounces.value = inputValue*0.03527396;
             break;
         case "kilograms":
-            grams.value = (inpuValue*1000).toFixed(2);
-            tons.value = inpuValue*0.001102;
-            pounds.value = inpuValue*2.204623;
-            ounces.value = inpuValue*35.27396;
-
-            console.log(inpuValue);
+            console.log("kilograms");
+            grams.value = (inputValue*1000).toFixed(2);
+            tons.value = inputValue*0.001102;
+            pounds.value = inputValue*2.204623;
+            ounces.value = inputValue*35.27396;
             break;
         case "tons":
-            grams.value =;
-            kilograms.value =;
-            pounds.value =;
-            ounces.value =;
-            console.log(inpuValue);
+            console.log("tons");
+            grams.value = inputValue*1000; 
+            kilograms.value = inputValue*100;
+            pounds.value = (inputValue*2204.6226).toFixed(2);
+            ounces.value = inputValue*35273.962;
+            console.log(inputValue);
             break;  
         case "pounds":
             console.log("pounds");
+            grams.value = inputValue*453.59237;
+            kilograms.value = inputValue*0.45359237;
+            tons.value = inputValue*0.00045359237;
+            ounces.value = inputValue*16;
             break;
         case "ounces":
             console.log("ounces");
+            grams.value = inputValue*28.349523;
+            kilograms.value = inputValue*0.028349523;
+            tons.value = inputValue*2.8349523e-5;
+            pounds.value = inputValue*0.0625 ;
             break;
     }
 }
 
 
-function reset() {
-    
-    var numInputs = document.getElementsByClassName("input")
 
+function reset() {
+    var numInputs = document.getElementsByClassName("input")
     for(i=0;i<numInputs.length;i++) {
         numInputs[i].value = "";
     }
 }
 /*
-function checks() {
+function mass() {
     var inputs = document.getElementsByClassName("input");
     for(i=0;i<inputs.length;i++) {
         hid = inputs[i].id;
