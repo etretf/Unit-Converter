@@ -39,6 +39,10 @@ function checks() {
             console.log(inpuValue);
             break;
         case "tons":
+            grams.value =;
+            kilograms.value =;
+            pounds.value =;
+            ounces.value =;
             console.log(inpuValue);
             break;  
         case "pounds":
