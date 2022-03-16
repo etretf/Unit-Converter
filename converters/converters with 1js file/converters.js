@@ -5,11 +5,16 @@ var tons = document.getElementById("tons");
 var pounds = document.getElementById("pounds");
 var ounces = document.getElementById("ounces");
 
-//speed page value
+//speed page values
 var mps = document.getElementById("meterPerSecond");
 var kph = document.getElementById("kilometerPerHour");
 var mph = document.getElementById("MilePerHour");
 
+//volume page values
+var milimeterCubed = document.getElementById("milimeterCubed");
+var centimeterCubed = document.getElementById("centimeterCubed");
+var meterCubed = document.getElementById("meterCubed");
+var liter = document.getElementById("liter");
 
 //var inputs = document.getElementsByClassName("input");
 
@@ -23,12 +28,12 @@ for(i=0;i<numInputs.length;i++) {
     numInputs[i].addEventListener("input",conversions);
 }
 
-
 function conversions() {
     console.log("conversions");
     inputId = event.target.id;
     inputValue = parseFloat(event.target.value);
     switch(inputId) {
+        //mass page
         case "grams":
             console.log("grams");
             kilograms.value = inputValue/1000;
@@ -65,6 +70,8 @@ function conversions() {
             tons.value = inputValue*2.8349523e-5;
             pounds.value = inputValue*0.0625 ;
             break;
+        
+        //Speed Page
         case "meterPerSecond":
             console.log("mps");
             kph.value = inputValue*3.6;
@@ -80,6 +87,24 @@ function conversions() {
             mps.value = inputValue*0.44704;
             kph.value = inputValue*1.609344;
             break;
+
+        //volume page
+        case "milimeterCubed":
+            console.log("mili cubed");
+            centimeterCubed.value = inputValue*0.001;
+            meterCubed.value = inputValue*0.000000001;
+            liter.value= inputValue*0.000001;
+            break;
+        case "centimeterCubed":
+            console.log("centi cubed");
+            break;
+        case "meterCubed":
+            console.log("meter cubed");
+            break;
+        case "liter":
+            console.log("liter");
+            break;
+
     }
 }
 
