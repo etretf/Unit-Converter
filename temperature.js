@@ -1,4 +1,5 @@
-//temperature page values
+window.onload=function(){
+    //temperature page values
 var celsius = document.getElementById("celsius");
 var fahrenheit = document.getElementById("fahrenheit");
 
@@ -31,3 +32,6 @@ function reset() {
         numInputs[i].value = "";
     }
 }
+}
+
+
