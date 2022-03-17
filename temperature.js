@@ -1,6 +1,6 @@
 //temperature page values
-var grams = document.getElementById("celsius");
-var kilograms = document.getElementById("fahrenheit");
+var celsius = document.getElementById("celsius");
+var fahrenheit = document.getElementById("fahrenheit");
 
 // Template for vars and selectors:
 //var inputs = document.getElementsByClassName("input");
