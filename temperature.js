@@ -1,6 +1,6 @@
 //temperature page values
-var grams = document.getElementById("celsius");
-var kilograms = document.getElementById("fahrenheit");
+var celsius = document.getElementById("celsius");
+var fahrenheit = document.getElementById("fahrenheit");
 
 // Template for vars and selectors:
 //var inputs = document.getElementsByClassName("input");
@@ -16,7 +16,7 @@ function temperatureConvert() {
     switch(inputId) {
         case "celsius":
             console.log("celsius");
-            fahrenheit.value = (inputValue)*(9/5) +32;
+            fahrenheit.value = (inputValue)*(9/5)+32;
             break;
         case "fahrenheit":
             console.log("fahrenheit");
