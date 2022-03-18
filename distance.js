@@ -1,3 +1,4 @@
+window.onload=function(){
 //distance values
 var millimeter = document.getElementById("millimeter");
 var centimeter = document.getElementById("centimeter");
@@ -9,14 +10,14 @@ var yard = document.getElementById("yard");
 var mile = document.getElementById("mile");
 
 //Distance input addEventListeners
-document.getElementById("millimeter").addEventListener("input", mass);
-document.getElementById("centimeter").addEventListener("input", mass);
-document.getElementById("meter").addEventListener("input", mass);
-document.getElementById("kilometer").addEventListener("input", mass);
-document.getElementById("inch").addEventListener("input", mass);
-document.getElementById("feet").addEventListener("input", mass);
-document.getElementById("yard").addEventListener("input", mass);
-document.getElementById("mile").addEventListener("input", mass);
+document.getElementById("millimeter").addEventListener("input", distanceConvert);
+document.getElementById("centimeter").addEventListener("input", distanceConvert);
+document.getElementById("meter").addEventListener("input", distanceConvert);
+document.getElementById("kilometer").addEventListener("input", distanceConvert);
+document.getElementById("inch").addEventListener("input", distanceConvert);
+document.getElementById("feet").addEventListener("input", distanceConvert);
+document.getElementById("yard").addEventListener("input", distanceConvert);
+document.getElementById("mile").addEventListener("input", distanceConvert);
 
 
 function distanceConvert() {
@@ -114,4 +115,5 @@ function reset() {
     for(i=0;i<numInputs.length;i++) {
         numInputs[i].value = "";
     }
+}
 }
