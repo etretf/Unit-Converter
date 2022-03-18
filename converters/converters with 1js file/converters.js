@@ -14,6 +14,7 @@ var mph = document.getElementById("MilePerHour");
 var milimeterCubed = document.getElementById("milimeterCubed");
 var centimeterCubed = document.getElementById("centimeterCubed");
 var meterCubed = document.getElementById("meterCubed");
+var mililiter = document.getElementById("mililiter")
 var liter = document.getElementById("liter");
 
 //var inputs = document.getElementsByClassName("input");
@@ -93,21 +94,40 @@ function conversions() {
             console.log("mili cubed");
             centimeterCubed.value = inputValue*0.001;
             meterCubed.value = inputValue*0.000000001;
-            liter.value= inputValue*0.000001;
+            mililiter.value = inputValue*0.001;
+            liter.value = inputValue*0.000001;
             break;
         case "centimeterCubed":
             console.log("centi cubed");
+            milimeterCubed.value = inputValue*1000
+            meterCubed.value = inputValue*1e-6;
+            mililiter.value = inputValue*1;
+            liter.value = inputValue*0.001;
             break;
         case "meterCubed":
             console.log("meter cubed");
+            milimeterCubed.value = inputValue*1e+9;
+            centimeterCubed.value = inputValue*1000000;
+            mililiter.value = inputValue*1000000;
+            liter.value = inputValue*1000;
+            break;
+        case "mililiter":
+            console.log("mililiter");
+            milimeterCubed.value = inputValue*1000;
+            centimeterCubed.value = inputValue*1;
+            meterCubed.value = inputValue*1e-6;
+            liter.value = inputValue*0.001;
             break;
         case "liter":
             console.log("liter");
+            milimeterCubed.value = inputValue*1000000;
+            centimeterCubed.value = inputValue*1000;
+            meterCubed.value = inputValue*0.001;
+            mililiter.value = inputValue*1000;
             break;
 
-    }
+    }  
 }
-
 
 
 function reset() {

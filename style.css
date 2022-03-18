@@ -1,5 +1,4 @@
 
-
 *, *:before, *:after {
     box-sizing: border-box;
 }
@@ -8,8 +7,6 @@
     margin: 0;
     padding: 0;
 }
-
-
 
 h2 {
     width: 78%;
@@ -185,7 +182,6 @@ nav img {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    
 }
 
 .unit-type h3 {
