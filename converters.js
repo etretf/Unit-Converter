@@ -4,7 +4,7 @@ window.onload=function() {
 
 //variable that will store the number of decimal points that the user requests
 //defualt is 3
-let decimalNum = 3;
+let decimalNum = 0;
 //drop down decimal value
 $(document).ready(function(){
     $(".form-select").change(function () {
