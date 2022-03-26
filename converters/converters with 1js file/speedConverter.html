@@ -47,29 +47,49 @@
         </div>
     </section>
 
+
+    <!--section that contains unique converter page elements-->
     <section class="converter-section">
-        <h3>SEED CONVERTER</h3>
-        <div class="converter-box">
+      <h3>SPEED CONVERTER</h3>
+      <!--div that contains the interactive converter elements-->
+      <div class="converter-box">
+        <!--div that contains the dropdown menu that lets user pick the decimal point amount for the answer display-->
+        <div class="decimal-dropDown">
+          <p>Decimal Points</p>
+          <select class="form-select">
+            <option class="onevALUE" value="0" > decimal points</option>
+            <option class="onevALUE" value="2">2</option>
+            <option class="onevALUE" value="3">3</option>
+            <option class="onevALUE" value="4">4</option>
+        </select>
+
+        <div class="input-boxes">
+          </div>
             <div class="unit-type">
-                <h3>Meters per second</h3>
-                <input type="number" id="meterPerSecond" class="input" placeholder="meterPerSecond">
-                <p>m/s</p>
+              <h3>Meters per second</h3>
+              <input type="number" id="meterPerSecond" class="input" placeholder="meterPerSecond">
+              <p>m/s</p>
             </div>
             <div class="unit-type">
-                <h3>kilometers per hour</h3>
-                <input type="number" id="kilometerPerHour" class="input" placeholder="kilometerPerHour">
-                <p>k/h</p>
+              <h3>kilometers per hour</h3>
+              <input type="number" id="kilometerPerHour" class="input" placeholder="kilometerPerHour">
+              <p>k/h</p>
             </div>
             <div class="unit-type">
-                <h3>Miles per hour</h3>
-                <input type="number" id="MilePerHour" class="input" placeholder="MilePerHour">
-                <p>mph</p>
+              <h3>Miles per hour</h3>
+              <input type="number" id="MilePerHour" class="input" placeholder="MilePerHour">
+              <p>mph</p>
             </div>
-            </div>
-            <button class="reset" onclick="reset()">Reset</button>
         </div>
+        
+        <div class="reset-button">
+          <button class="reset" onclick="reset()">Reset</button>
+        </div>
+      </div>
     </section>
 
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="converters.js"></script>
+
 </body>
 </html>

@@ -83,105 +83,105 @@ function conversions() {
         //mass page
         case "grams":
             console.log("grams");
-            kilograms.value = inputValue/1000;
-            tons.value = inputValue*1.1023e-6;
-            pounds.value = inputValue*0.002204623;
-            ounces.value = inputValue*0.03527396;
+            kilograms.value = (inputValue/1000);
+            tons.value = (inputValue*1.1023e-6);
+            pounds.value = (inputValue*0.002204623);
+            ounces.value = (inputValue*0.03527396);
             break;
         case "kilograms":
             console.log("kilograms");
-            grams.value = (inputValue*1000).toFixed(2);
-            tons.value = inputValue*0.001102;
-            pounds.value = inputValue*2.204623;
-            ounces.value = inputValue*35.27396;
+            grams.value = (inputValue*1000);
+            tons.value = (inputValue*0.001102);
+            pounds.value = (inputValue*2.204623);
+            ounces.value = (inputValue*35.27396);
             break;
         case "tons":
             console.log("tons");
-            grams.value = inputValue*1000; 
-            kilograms.value = inputValue*100;
-            pounds.value = (inputValue*2204.6226).toFixed(2);
-            ounces.value = inputValue*35273.962;
+            grams.value = (inputValue*1000); 
+            kilograms.value = (inputValue*100);
+            pounds.value = (inputValue*2204.6226);
+            ounces.value = (inputValue*35273.962);
             console.log(inputValue);
             break;  
         case "pounds":
             console.log("pounds");
-            grams.value = inputValue*453.59237;
-            kilograms.value = inputValue*0.45359237;
-            tons.value = inputValue*0.00045359237;
-            ounces.value = inputValue*16;
+            grams.value = (inputValue*453.59237);
+            kilograms.value = (inputValue*0.45359237);
+            tons.value = (inputValue*0.00045359237);
+            ounces.value = (inputValue*16);
             break;
         case "ounces":
             console.log("ounces");
-            grams.value = inputValue*28.349523;
-            kilograms.value = inputValue*0.028349523;
-            tons.value = inputValue*2.8349523e-5;
-            pounds.value = inputValue*0.0625 ;
+            grams.value = (inputValue*28.349523);
+            kilograms.value = (inputValue*0.028349523);
+            tons.value = (inputValue*2.8349523e-5);
+            pounds.value = (inputValue*0.0625);
             break;
         
         //Speed Page
         case "meterPerSecond":
             console.log("mps");
-            kph.value = inputValue*3.6;
-            mph.value = inputValue*2.236936;
+            kph.value = (inputValue*3.6);
+            mph.value = (inputValue*2.236936);
             break;
         case "kilometerPerHour":
             console.log("kph");
-            mps.value = inputValue*0.2777778;
-            mph.value = inputValue*0.6213712;
+            mps.value = (inputValue*0.2777778);
+            mph.value = (inputValue*0.6213712);
             break;
         case "MilePerHour":
             console.log("mph");
-            mps.value = inputValue*0.44704;
-            kph.value = inputValue*1.609344;
+            mps.value = (inputValue*0.44704);
+            kph.value = (inputValue*1.609344);
             break;
 
         //volume page
         case "milimeterCubed":
             console.log("mili cubed");
-            centimeterCubed.value = inputValue*0.001;
-            meterCubed.value = inputValue*0.000000001;
-            mililiter.value = inputValue*0.001;
-            liter.value = inputValue*0.000001;
+            centimeterCubed.value = (inputValue*0.001);
+            meterCubed.value = (inputValue*0.000000001);
+            mililiter.value = (inputValue*0.001);
+            liter.value = (inputValue*0.000001);
             break;
         case "centimeterCubed":
             console.log("centi cubed");
-            milimeterCubed.value = inputValue*1000
-            meterCubed.value = inputValue*1e-6;
-            mililiter.value = inputValue*1;
-            liter.value = inputValue*0.001;
+            milimeterCubed.value = (inputValue*1000);
+            meterCubed.value = (inputValue*1e-6);
+            mililiter.value = (inputValue*1);
+            liter.value = (inputValue*0.001);
             break;
         case "meterCubed":
             console.log("meter cubed");
-            milimeterCubed.value = inputValue*1e+9;
-            centimeterCubed.value = inputValue*1000000;
-            mililiter.value = inputValue*1000000;
-            liter.value = inputValue*1000;
+            milimeterCubed.value = (inputValue*1e+9);
+            centimeterCubed.value = (inputValue*1000000);
+            mililiter.value = (inputValue*1000000);
+            liter.value = (inputValue*1000);
             break;
         case "mililiter":
             console.log("mililiter");
-            milimeterCubed.value = inputValue*1000;
-            centimeterCubed.value = inputValue*1;
-            meterCubed.value = inputValue*1e-6;
-            liter.value = inputValue*0.001;
+            milimeterCubed.value = (inputValue*1000);
+            centimeterCubed.value = (inputValue*1);
+            meterCubed.value = (inputValue*1e-6);
+            liter.value = (inputValue*0.001);
             break;
         case "liter":
             console.log("liter");
-            milimeterCubed.value = inputValue*1000000;
-            centimeterCubed.value = inputValue*1000;
-            meterCubed.value = inputValue*0.001;
-            mililiter.value = inputValue*1000;
+            milimeterCubed.value = (inputValue*1000000);
+            centimeterCubed.value = (inputValue*1000);
+            meterCubed.value = (inputValue*0.001);
+            mililiter.value = (inputValue*1000);
             break;
 
         //distance page
         case "millimeter":
             console.log("millimeter");
-            centimeter.value = (inputValue*0.1).toFixed(decimalNum);
-            meter.value = (inputValue*0.001).toExponential(3);
-            kilometer.value = (inputValue*0.000001).toFixed(decimalNum);
-            inch.value = (inputValue*0.039370079).toFixed(decimalNum);
-            feet.value= (inputValue*0.0032808399).toFixed(decimalNum);
-            yard.value= (inputValue*0.0010936133).toFixed(decimalNum);
-            mile.value= (inputValue*6.213712e-7).toFixed(decimalNum);
+            centimeter.value = (inputValue*0.1);
+            meter.value = (inputValue*0.001);
+            kilometer.value = (inputValue*0.000001);
+            inch.value = (inputValue*0.039370079);
+            feet.value= (inputValue*0.0032808399);
+            yard.value= (inputValue*0.0010936133);
+            mile.value= (inputValue*6.213712e-7);
             break;
         case "centimeter":
             console.log("centimeter");
@@ -315,13 +315,19 @@ function conversions() {
         //tempature values
         case "celsius":
             console.log("celsius");
-            fahrenheit.value = ((inputValue)*(9/5)+32).toFixed(decimalNum);
+            fahrenheit.value = ((inputValue)*(9/5)+32);
             break;
         case "fahrenheit":
             console.log("fahrenheit");
-            celsius.value = ((inputValue)*(5/9)-32).toFixed(decimalNum);
+            celsius.value = ((inputValue)*(5/9)-32);
             break;
     }  
+    var changeInputDecimal = document.getElementsByClassName("input");
+    for(i=0;i<changeInputDecimal.length;i++){
+        if(changeInputDecimal[i].id != inputId) {
+            changeInputDecimal[i].value = parseFloat(changeInputDecimal[i].value).toFixed(decimalNum);
+        }
+    }
     /*
     let changeInputs = document.getElementsByClassName("input");
         for(i=0;i<changeInputs.length;i++) {
