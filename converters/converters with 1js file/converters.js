@@ -1,6 +1,26 @@
 
 window.onload=function() {
 //mass page values
+
+//variable that will store the number of decimal points that the user requests
+//defualt is 3
+let decimalNum = 3;
+//drop down decimal value
+$(document).ready(function(){
+    $(".form-select").change(function () {
+        decimalNum = $(this).val();
+        console.log("chanegd");
+        console.log(decimalNum);
+        let changeInputs = document.getElementsByClassName("input");
+        for(i=0;i<changeInputs.length;i++) {
+            changeInputs[i].value = parseFloat(changeInputs[i].value).toFixed(decimalNum);
+        } 
+    });
+})
+
+
+
+
 let grams = document.getElementById("grams");
 let kilograms = document.getElementById("kilograms");
 let tons = document.getElementById("tons");
@@ -295,11 +315,11 @@ function conversions() {
         //tempature values
         case "celsius":
             console.log("celsius");
-            fahrenheit.value = (inputValue)*(9/5)+32;
+            fahrenheit.value = ((inputValue)*(9/5)+32).toFixed(decimalNum);
             break;
         case "fahrenheit":
             console.log("fahrenheit");
-            celsius.value = (inputValue)*(5/9)-32;
+            celsius.value = ((inputValue)*(5/9)-32).toFixed(decimalNum);
             break;
     }  
 }

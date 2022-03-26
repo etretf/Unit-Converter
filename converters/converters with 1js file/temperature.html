@@ -64,22 +64,41 @@
       </div>
     </section>
 
+    <!--section that contains unique converter page elements-->
     <section class="converter-section">
       <h3>TEMPERATURE CONVERTER</h3>
+      <!--div that contains the interactive converter elements-->
       <div class="converter-box">
-        <div class="unit-type">
-          <h3>Celsius</h3>
-          <input  id="celsius" class="input" type="number" />
-          <p>°C</p>
+        <!--div that contains the dropdown menu that lets user pick the decimal point amount for the answer display-->
+        <div class="decimal-dropDown">
+          <select class="form-select">
+            <option class="onevALUE" value="0" > decimal points</option>
+            <option class="onevALUE" value="2">2</option>
+            <option class="onevALUE" value="3">3</option>
+            <option class="onevALUE" value="4">4</option>
+        </select>
+
+        <div class="input-boxes">
+          </div>
+          <div class="unit-type">
+           <h3>Celsius</h3>
+           <input id="celsius" class="input" type="number" />
+           <p>°C</p>
+          </div>
+          <div class="unit-type">
+            <h3>Fahrenheit</h3>
+            <input  id="fahrenheit" class="input" type="number" />
+            <p>°F</p>
+          </div>
         </div>
-        <div class="unit-type">
-          <h3>Fahrenheit</h3>
-          <input  id="fahrenheit" class="input" type="number" />
-          <p>°F</p>
+        
+        <div class="reset-button">
+          <button class="reset" onclick="reset()">Reset</button>
         </div>
       </div>
     </section>
 
-    <script src="temperature.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="converters.js"></script>
   </body>
 </html>
