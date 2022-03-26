@@ -19,7 +19,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="converters.js"></script>
+    
   </head>
 
   <body>
@@ -64,50 +64,70 @@
       </div>
     </section>
 
+
     <section class="converter-section">
       <h3>DISTANCE CONVERTER</h3>
+      <!--div that contains the interactive converter elements-->
       <div class="converter-box">
-        <div class="unit-type">
-          <h3>Millimeters</h3>
-          <input id="millimeter" class="input" type="number" />
-          <p>mm</p>
+        <!--div that contains the dropdown menu that lets user pick the decimal point amount for the answer display-->
+        <div class="decimal-dropDown">
+          <select class="form-select">
+            <option class="onevALUE" value="0" > decimal points</option>
+            <option class="onevALUE" value="2">2</option>
+            <option class="onevALUE" value="3">3</option>
+            <option class="onevALUE" value="4">4</option>
+        </select>
+
+        <div class="input-boxes">
+          <div class="unit-type">
+            <h3>Millimeters</h3>
+            <input id="millimeter" class="input" type="number" />
+            <p>mm</p>
+          </div>
+          <div class="unit-type">
+            <h3>Centimeters</h3>
+            <input id="centimeter" class="input" type="number" />
+            <p>cm</p>
+          </div>
+          <div class="unit-type">
+            <h3>Meters</h3>
+            <input id="meter" class="input" type="number" />
+            <p>m</p>
+          </div
+          <div class="unit-type">
+            <h3>Kilometers</h3>
+            <input id="kilometer" class="input" type="number" />
+            <p>km</p>
+          </div>>
+          <div class="unit-type">
+            <h3>Inches</h3>
+            <input id="inch" class="input" type="number" />
+            <p>inch</p>
+          </div>
+          <div class="unit-type">
+            <h3>Feet</h3>
+            <input id="feet" class="input" type="number" />
+            <p>feet</p>
+          </div>
+          <div class="unit-type">
+            <h3>Yards</h3>
+            <input id="yard" class="input" type="number" />
+            <p>yd</p>
+          </div>
+          <div class="unit-type">
+            <h3>Miles</h3>
+            <input id="mile" class="input" type="number" />
+            <p>mi</p>
+          </div>
         </div>
-        <div class="unit-type">
-          <h3>Centimeters</h3>
-          <input id="centimeter" class="input" type="number" />
-          <p>cm</p>
-        </div>
-        <div class="unit-type">
-          <h3>Meters</h3>
-          <input id="meter" class="input" type="number" />
-          <p>m</p>
-        </div
-        <div class="unit-type">
-          <h3>Kilometers</h3>
-          <input id="kilometer" class="input" type="number" />
-          <p>km</p>
-        </div>>
-        <div class="unit-type">
-          <h3>Inches</h3>
-          <input id="inch" class="input" type="number" />
-          <p>inch</p>
-        </div>
-        <div class="unit-type">
-          <h3>Feet</h3>
-          <input id="feet" class="input" type="number" />
-          <p>feet</p>
-        </div>
-        <div class="unit-type">
-          <h3>Yards</h3>
-          <input id="yard" class="input" type="number" />
-          <p>yd</p>
-        </div>
-        <div class="unit-type">
-          <h3>Miles</h3>
-          <input id="mile" class="input" type="number" />
-          <p>mi</p>
+        
+        <div class="reset-button">
+          <button class="reset" onclick="reset()">Reset</button>
         </div>
       </div>
     </section>
+    
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="converters.js"></script>
   </body>
 </html>

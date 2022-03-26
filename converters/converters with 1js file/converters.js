@@ -175,13 +175,13 @@ function conversions() {
         //distance page
         case "millimeter":
             console.log("millimeter");
-            centimeter.value = inputValue*0.1;
-            meter.value = inputValue*0.001;
-            kilometer.value = inputValue*0.000001;
-            inch.value = inputValue*0.039370079;
-            feet.value= inputValue*0.0032808399;
-            yard.value= inputValue*0.0010936133;
-            mile.value= inputValue*6.213712e-7;
+            centimeter.value = (inputValue*0.1).toFixed(decimalNum);
+            meter.value = (inputValue*0.001).toExponential(3);
+            kilometer.value = (inputValue*0.000001).toFixed(decimalNum);
+            inch.value = (inputValue*0.039370079).toFixed(decimalNum);
+            feet.value= (inputValue*0.0032808399).toFixed(decimalNum);
+            yard.value= (inputValue*0.0010936133).toFixed(decimalNum);
+            mile.value= (inputValue*6.213712e-7).toFixed(decimalNum);
             break;
         case "centimeter":
             console.log("centimeter");
@@ -322,6 +322,14 @@ function conversions() {
             celsius.value = ((inputValue)*(5/9)-32).toFixed(decimalNum);
             break;
     }  
+    /*
+    let changeInputs = document.getElementsByClassName("input");
+        for(i=0;i<changeInputs.length;i++) {
+            if (changeInputs[i].value>1000){
+                changeInputs[i].value = parseFloat(changeInputs[i].value).toExponential(decimalNum);
+            }
+        } 
+        */
 }
 
 
