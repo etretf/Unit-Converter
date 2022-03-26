@@ -8,14 +8,28 @@
     padding: 0;
 }
 
+/*styling the banner header*/
+h1 {
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 96px;
+}
+
 h2 {
-    width: 78%;
     margin: 50px auto;
     text-align: center;
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 48pt;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+    font-weight: bold;
 }
 
 nav {
     background-color: #FC4F1B;
+    border: 2px solid black;
     width: 100%;
     height: 70px;
     display: flex;
@@ -29,40 +43,6 @@ nav img {
     height: 50px;
     margin: auto;
 }
-
-/*Homepage styling*/
-.banner {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(#FC4F1B, #F7B132);
-}
-
-.banner-items {
-    width: 78%;
-    background-color: transparent;
-    margin: auto;
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.banner-btn {
-    text-decoration: none;
-    text-align: center;
-    background-color: #F2F2F2;
-    color: #222831;
-    padding: 15px;
-    width: 10%;
-    min-width: 200px;
-    border-radius: 10px;
-}
-
-.banner-btn:hover {
-    background-color: #d6d6d6;
-    transition-duration: 0.5s;
-}
-
 /*DARK-LIGHT MODE BUTTON*/
 .switch {
     position: relative;
@@ -132,17 +112,66 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
+/*Homepage styling*/
+/*styling banner container*/
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#FC4F1B, #F7B132);
+    background-image: url(images/backgroud\ copy.jpg);
+    background-size: cover;
+    padding-top: 30vh;
+}
+
+/*styling the elements that are on the banner*/
+.banner-items {
+    width: 78%;
+    max-width: 1440px;
+    margin: auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-items p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24pt;
+}
+
+.banner-btn {
+    text-decoration: none;
+    text-align: center;
+    background-color: #F2F2F2;
+    font-family: 'Ropa Sans', sans-serif;
+    font-size: 18pt;
+    color: #222831;
+    padding: 15px;
+    width: 200px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.banner-btn:hover {
+    background-color: #d6d6d6;
+    color: black;
+    transition-duration: 0.5s;
+}
+
+
+
+
 /*CONVERTER BUTTONS*/
 .converters {
-    height: 100vh;
+    min-height: 100vh;
     padding: 100px 0;
     background-color: #F2F2F2;
 }
 
 
 .converter-links {
-    border: 2pt solid black;
     width: 78%;
+    max-width: 1440px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -161,6 +190,7 @@ input:checked + .slider:before {
     justify-content: center;
     align-items: center;
     align-content: center;
+    text-align: center;
     margin: 30px 0;
     padding: 40px;
     border-radius: 10px;
@@ -169,14 +199,21 @@ input:checked + .slider:before {
     font-weight: bold;
 }
 
-.converter-link img {
-    width: 150px;
+.converter-link:hover {
+    background-color: #E7E7E7;
+    color: #CB3B24;
+    transition-duration: 0.25s;
 }
 
 .converter-link p {
-    width: 100%;
-    text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
+.converter-link img {
+    height: 70px;
+    margin: 25px;
+}
+
+
 
 .footer {
     min-height: 10vh;
@@ -200,6 +237,8 @@ input:checked + .slider:before {
 .github-logo {
     width: 50px;
 }
+
+
 
 /*Converter page styling*/
 .converters-nav {
@@ -278,4 +317,86 @@ input:checked + .slider:before {
     height: 40px;
     text-align: center;
     font-size: 18pt;
+}
+
+/*homepage for screenwisth under 500*/
+@media screen and (max-width: 900px) {
+    h1{
+        font-size: 48pt;
+    }
+
+    h2{
+        font-size: 32pt;
+        margin: 40px auto;
+    }
+
+    h4 {
+        font-size: 16pt;
+    }
+    
+    /*styling the elements that are on the banner*/
+    .banner-items {
+        width: 80%;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .banner-items p {
+        font-size: 18pt;
+    }
+
+    .converters {
+        min-height: 100vh;
+        padding: 40px 0;
+        background-color: #F2F2F2;
+    }
+
+    .converter-links {
+        width: 80%;
+        justify-content: space-between;
+    }
+    
+    .converter-link {
+        min-width: 100px;
+        width: 47%;
+        height: auto;
+        margin: 15px 0;
+        padding: 30pxpx;
+    }
+    
+    .converter-link:hover {
+        background-color: #E7E7E7;
+        color: #CB3B24;
+        transition-duration: 0.25s;
+    }
+    
+    
+}
+
+@media screen and (max-width: 500px) {
+    h1{
+        font-size: 36pt;
+    }
+
+    h2{
+        font-size: 24pt;
+        margin: 40px auto;
+    }
+
+    h4 {
+        font-size: 14pt;
+    }
+    .banner-items {
+        width: 90%;
+    }
+
+    .converter-links {
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    .converter-link img {
+        height: 50px;
+        margin: 15px;
+    }
 }
