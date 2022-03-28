@@ -162,6 +162,7 @@ function conversions() {
             mililiter.value = (inputValue*0.001);
             liter.value = (inputValue*0.000001);
             break;
+        //case if the id of the input field that the user has entered into is "centimeterCubed"
         case "centimeterCubed":
             console.log("centi cubed");
             milimeterCubed.value = (inputValue*1000);
@@ -169,6 +170,7 @@ function conversions() {
             mililiter.value = (inputValue*1);
             liter.value = (inputValue*0.001);
             break;
+        //case if the id of the input field that the user has entered into is "meterCubed"
         case "meterCubed":
             console.log("meter cubed");
             milimeterCubed.value = (inputValue*1e+9);
@@ -176,6 +178,7 @@ function conversions() {
             mililiter.value = (inputValue*1000000);
             liter.value = (inputValue*1000);
             break;
+        //case if the id of the input field that the user has entered into is "mililiter"
         case "mililiter":
             console.log("mililiter");
             milimeterCubed.value = (inputValue*1000);
@@ -183,6 +186,7 @@ function conversions() {
             meterCubed.value = (inputValue*1e-6);
             liter.value = (inputValue*0.001);
             break;
+        //case if the id of the input field that the user has entered into is "liter"
         case "liter":
             console.log("liter");
             milimeterCubed.value = (inputValue*1000000);
@@ -191,7 +195,8 @@ function conversions() {
             mililiter.value = (inputValue*1000);
             break;
 
-        //distance page
+        /*distance page cases*/
+        //case if the id of the input field that the user has entered into is "milimeter"
         case "millimeter":
             console.log("millimeter");
             centimeter.value = (inputValue*0.1);
@@ -202,6 +207,7 @@ function conversions() {
             yard.value= (inputValue*0.0010936133);
             mile.value= (inputValue*6.213712e-7);
             break;
+        //case if the id of the input field that the user has entered into is "centimeter"
         case "centimeter":
             console.log("centimeter");
             millimeter.value = inputValue*10;
@@ -212,6 +218,7 @@ function conversions() {
             yard.value= inputValue*0.010936133;
             mile.value= inputValue*6.213712e-6;
             break;
+        //case if the id of the input field that the user has entered into is "meter"
         case "meter":
             console.log("meter");
             millimeter.value = inputValue*1000;
@@ -222,6 +229,7 @@ function conversions() {
             yard.value= inputValue*1.0936133;
             mile.value= inputValue*6.213712e-4;
             break;  
+        //case if the id of the input field that the user has entered into is "kilometer"
         case "kilometer":
             console.log("kilometer");
             millimeter.value = inputValue*1000000;
@@ -232,8 +240,9 @@ function conversions() {
             yard.value= inputValue*1093.6133;
             mile.value= inputValue*0.6213712;
             break;
+        //case if the id of the input field that the user has entered into is "inch
         case "inch":
-             console.log("inch");
+            console.log("inch");
             millimeter.value = inputValue*25.4;
             centimeter.value = inputValue*2.54;
             meter.value = inputValue*0.0254;
@@ -242,8 +251,9 @@ function conversions() {
             yard.value= inputValue*0.0277777778;
             mile.value= inputValue*0.000015782828;
             break;
+        //case if the id of the input field that the user has entered into is "feet"
         case "feet":
-             console.log("feet");
+            console.log("feet");
             millimeter.value = inputValue*304.8;
             centimeter.value = inputValue*30.48;
             meter.value = inputValue*0.3048;
@@ -252,6 +262,7 @@ function conversions() {
             yard.value= inputValue*0.33333333333;
             mile.value= inputValue*0.00018939394;
             break;
+        //case if the id of the input field that the user has entered into is yard"
         case "yard":
              console.log("yard");
             millimeter.value = inputValue*914.4;
@@ -262,6 +273,7 @@ function conversions() {
             feet.value= inputValue*3;
             mile.value= inputValue*0.00056818182;
             break;
+        //case if the id of the input field that the user has entered into is "mile"
         case "mile":
              console.log("mile");
             millimeter.value = inputValue*1609344;
@@ -273,7 +285,8 @@ function conversions() {
             yard.value= inputValue*1760;
             break;
         
-        //time page 
+        /*time page cases*/
+        //case if the id of the input field that the user has entered into is "second"
         case "second":
             minute.value= inputValue/60;
             hour.value= inputValue/3600;
@@ -282,6 +295,7 @@ function conversions() {
             month.value=inputValue/2629800;
             year.value=inputValue/31557600;
             break;
+        //case if the id of the input field that the user has entered into is "minute"
         case "minute":
             second.value=inputValue*60;
             hour.value=inputValue/60;
@@ -290,6 +304,7 @@ function conversions() {
             month.value=inputValue/43830;
             year.value=inputValue/525960;
             break;
+        //case if the id of the input field that the user has entered into is "hour"
         case "hour":
             second.value=inputValue*3600;
             minute.value=inputValue*60;
@@ -298,6 +313,7 @@ function conversions() {
             month.value=inputValue/730.5;
             year.value=inputValue/8766;
             break;
+        //case if the id of the input field that the user has entered into is "day"
         case "day":
             second.value=inputValue*604800;
             minute.value=inputValue*10080;
@@ -306,6 +322,7 @@ function conversions() {
             month.value=inputValue/30.4375;
             year.value=inputValue/365.25;
             break;
+        //case if the id of the input field that the user has entered into is "week"
         case "week":
             second.value=inputValue*604800;
             minute.value=inputValue*10080;
@@ -314,6 +331,7 @@ function conversions() {
             month.value=inputValue/4.34524;
             year.value=inputValue/52.17857;
             break;
+        //case if the id of the input field that the user has entered into is "month"
         case "month":
             second.value=inputValue*2629800;
             minute.value=inputValue*43830;
@@ -322,6 +340,7 @@ function conversions() {
             week.value=inputValue*4.348214;
             year.value=inputValue/12;
             break;
+        //case if the id of the input field that the user has entered into is "year"
         case "year":
             second.value=inputValue*31557600;
             minute.value=inputValue*525960;
@@ -331,7 +350,7 @@ function conversions() {
             month.value=inputValue*12;
             break;
 
-        //temperature values
+        /*temperature page cases*/
         case "celsius":
             console.log("celsius");
             fahrenheit.value = ((inputValue)*(9/5)+32);
@@ -346,22 +365,32 @@ function conversions() {
 }
 
 //function that will change the number of decimal points displayed in the input fields
+//function takes in the id of the input field that the user has entered a number into
 function inputDecimalChange(currentInputId) {
+    //getting all of the inputs from the html and storing them under changeInputDecimal
     var changeInputDecimal = document.getElementsByClassName("input");
+    //looping through the input fields
     for(i=0;i<changeInputDecimal.length;i++){
+        //checking if the id of the current input fields equal the id of the input field that the user has entered a number into
         if(changeInputDecimal[i].id != currentInputId) {
+            //changing the number of decimal places of the input field
             changeInputDecimal[i].value = parseFloat(changeInputDecimal[i].value).toFixed(decimalNum);
         }
     }
 }
 
+//event listener will listen for when the reset button is clicked
+//if the button is clicked the resetInputFields function will be called
 document.getElementById("reset").addEventListener("click", resetInputFields);
-
+//resetInputFields function will reset all of the input fields
 function resetInputFields() {
+    //looping through all  of the input fields
     for (i=0; i<numInputs.length; i++) {
+        //clearing input field
         numInputs[i].value = "";
     }
 }
+
 }
 
 
