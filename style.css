@@ -30,7 +30,6 @@ h4 {
 
 nav {
   background-color: #fc4f1b;
-  border: 2px solid black;
   width: 100%;
   height: 70px;
   display: flex;
@@ -49,7 +48,6 @@ nav {
   display: flex;
   align-items: center; /**/
   justify-content: space-between; /**/
-  border: 2px solid red;
 }
 
 nav img {
@@ -272,9 +270,10 @@ input:checked + .slider:before {
   max-width: 1440px;
   margin: auto;
   height: 100%;
-  background-color: #f7b132;
+  background-color:white;
   display: flex;
   justify-content: space-between;
+  font-weight: 650;
 }
 
 .nav-converter-link {
@@ -283,7 +282,12 @@ input:checked + .slider:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.nav-converter-link:hover {
+  background-color: #d6d6d6;
 }
 
 .nav-converter-link img {
@@ -292,6 +296,7 @@ input:checked + .slider:before {
 
 .nav-converter-link p {
   margin: 10px;
+  color:#cb3b24;
 }
 
 .converter-section {
