@@ -1,45 +1,49 @@
-
+//window onload function to make sure html is loaded before the js begins
 window.onload=function() {
 //reset input fields on reload
 document.getElementsByClassName("input").value='';
 
 //variable that will store the number of decimal points that the user requests
 //default is 3
-let decimalNum = 0;
-//drop down decimal value
+let decimalNum = 3;
+//drop down menu for the decimal values
 $(document).ready(function(){
+    //jquery will monitor if a decimal value from the dropdown menu was selected
     $(".form-select").change(function () {
+        //changing the decimalNum to the decimal value that is selected from the dropdown menu
         decimalNum = $(this).val();
         console.log("changed");
         console.log(decimalNum);
+        //getting all of the inputs from the html and storing them under changeInputs
         let changeInputs = document.getElementsByClassName("input");
+        //looping through all of the input fields
         for(i=0;i<changeInputs.length;i++) {
+            //changing all of the input fields to display the number of decimal points that the user selected
             changeInputs[i].value = parseFloat(changeInputs[i].value).toFixed(decimalNum);
         } 
     });
 })
 
-//mass page values
-
+//getting mass page input values
 let grams = document.getElementById("grams");
 let kilograms = document.getElementById("kilograms");
 let tons = document.getElementById("tons");
 let pounds = document.getElementById("pounds");
 let ounces = document.getElementById("ounces");
 
-//speed page values
+//getting speed page input values
 let mps = document.getElementById("meterPerSecond");
 let kph = document.getElementById("kilometerPerHour");
 let mph = document.getElementById("MilePerHour");
 
-//volume page values
+//getting the volume page input values
 let milimeterCubed = document.getElementById("milimeterCubed");
 let centimeterCubed = document.getElementById("centimeterCubed");
 let meterCubed = document.getElementById("meterCubed");
 let mililiter = document.getElementById("mililiter")
 let liter = document.getElementById("liter");
 
-//distance page values
+//getting the distance page input values
 let millimeter = document.getElementById("millimeter");
 let centimeter = document.getElementById("centimeter");
 let meter = document.getElementById("meter");
@@ -49,7 +53,7 @@ let feet = document.getElementById("feet");
 let yard = document.getElementById("yard");
 let mile = document.getElementById("mile");
 
-//time page values
+//getting the time page input values
 let second = document.getElementById("second");
 let minute = document.getElementById("minute");
 let hour = document.getElementById("hour");
@@ -58,25 +62,36 @@ let week = document.getElementById("week");
 let month = document.getElementById("month");
 let year = document.getElementById("year");
 
-//temperature page values
+//getting the temperature page input values
 let celsius = document.getElementById("celsius");
 let fahrenheit = document.getElementById("fahrenheit");
 
 
 
-//checking if one of the input fields has text in it
+//getting all of the inputs from the html and storing them under changeInputs
 let numInputs = document.getElementsByClassName("input")
+
+//looping through all the inputs fields
 for(i=0;i<numInputs.length;i++) {
-numInputs[i].addEventListener("input",conversions);
+//checking if the user has entered a number into any of the input fields
+//if the user enters a number into of the input fields the conversions function will be called
+numInputs[i].addEventListener("input", conversions);
 }
 
-
+//conversions functions 
+//function identifies the entered input field id and value and changes the other input fields correspondingly
 function conversions() {
     console.log("conversions");
-    inputId = event.target.id;
-    inputValue = parseFloat(event.target.value);
+    //getting the id of the input field that the user has entered input into and storing it as inputId
+    let inputId = event.target.id;
+    //getting the value of the input field that the user has entered input into and storing it as inputValue
+    let inputValue = parseFloat(event.target.value);
+
+    //switch statements that have cases based on the id value of the input field
+    //if a case is chosen the proper values will be calculated and their input fields will be updated accordingly 
     switch(inputId) {
-        //mass page
+        /*mass page cases*/
+        //case if the id of the input field that the user has entered into is "grams"
         case "grams":
             console.log("grams");
             kilograms.value = (inputValue/1000);
@@ -84,6 +99,7 @@ function conversions() {
             pounds.value = (inputValue*0.002204623);
             ounces.value = (inputValue*0.03527396);
             break;
+        //case if the id of the input field that the user has entered into is "kilograms"
         case "kilograms":
             console.log("kilograms");
             grams.value = (inputValue*1000);
@@ -91,6 +107,7 @@ function conversions() {
             pounds.value = (inputValue*2.204623);
             ounces.value = (inputValue*35.27396);
             break;
+        //case if the id of the input field that the user has entered into is "tons"
         case "tons":
             console.log("tons");
             grams.value = (inputValue*1000); 
@@ -99,6 +116,7 @@ function conversions() {
             ounces.value = (inputValue*35273.962);
             console.log(inputValue);
             break;  
+        //case if the id of the input field that the user has entered into is "pounds"
         case "pounds":
             console.log("pounds");
             grams.value = (inputValue*453.59237);
@@ -106,6 +124,7 @@ function conversions() {
             tons.value = (inputValue*0.00045359237);
             ounces.value = (inputValue*16);
             break;
+        //case if the id of the input field that the user has entered into is "ounces"
         case "ounces":
             console.log("ounces");
             grams.value = (inputValue*28.349523);
@@ -114,24 +133,28 @@ function conversions() {
             pounds.value = (inputValue*0.0625);
             break;
         
-        //Speed Page
+        /*speed page cases*/
+        //case if the id of the input field that the user has entered into is "meterPerSecond"
         case "meterPerSecond":
             console.log("mps");
             kph.value = (inputValue*3.6);
             mph.value = (inputValue*2.236936);
             break;
+        //case if the id of the input field that the user has entered into is "kilometerPerHour"
         case "kilometerPerHour":
             console.log("kph");
             mps.value = (inputValue*0.2777778);
             mph.value = (inputValue*0.6213712);
             break;
+        //case if the id of the input field that the user has entered into is "MilePerHour"
         case "MilePerHour":
             console.log("mph");
             mps.value = (inputValue*0.44704);
             kph.value = (inputValue*1.609344);
             break;
 
-        //volume page
+        /*volume page cases*/
+        //case if the id of the input field that the user has entered into is "milimeterCubed"
         case "milimeterCubed":
             console.log("mili cubed");
             centimeterCubed.value = (inputValue*0.001);
@@ -318,9 +341,15 @@ function conversions() {
             celsius.value = ((inputValue)*(5/9)-32);
             break;
     }  
+    inputDecimalChange(inputId)
+    
+}
+
+//function that will change the number of decimal points displayed in the input fields
+function inputDecimalChange(currentInputId) {
     var changeInputDecimal = document.getElementsByClassName("input");
     for(i=0;i<changeInputDecimal.length;i++){
-        if(changeInputDecimal[i].id != inputId) {
+        if(changeInputDecimal[i].id != currentInputId) {
             changeInputDecimal[i].value = parseFloat(changeInputDecimal[i].value).toFixed(decimalNum);
         }
     }
