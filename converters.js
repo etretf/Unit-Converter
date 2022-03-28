@@ -1,15 +1,15 @@
 
 window.onload=function() {
-//mass page values
+
 
 //variable that will store the number of decimal points that the user requests
-//defualt is 3
+//default is 3
 let decimalNum = 0;
 //drop down decimal value
 $(document).ready(function(){
     $(".form-select").change(function () {
         decimalNum = $(this).val();
-        console.log("chanegd");
+        console.log("changed");
         console.log(decimalNum);
         let changeInputs = document.getElementsByClassName("input");
         for(i=0;i<changeInputs.length;i++) {
@@ -18,8 +18,7 @@ $(document).ready(function(){
     });
 })
 
-
-
+//mass page values
 
 let grams = document.getElementById("grams");
 let kilograms = document.getElementById("kilograms");
@@ -346,4 +345,8 @@ function reset() {
     }
 }
 
+}
+
+window.onload = function(){
+    document.getElementsByClassName("input").value='';
 }
