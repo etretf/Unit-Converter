@@ -2,8 +2,6 @@
 window.onload=function() {
 //reset input fields on reload
 document.getElementsByClassName("input").value='';
-let button = document.getElementsbyClassName("button");
-button.addEventListener("click", window.onload);
 
 //variable that will store the number of decimal points that the user requests
 //default is 3
@@ -65,17 +63,13 @@ let celsius = document.getElementById("celsius");
 let fahrenheit = document.getElementById("fahrenheit");
 
 
-//let inputs = document.getElementsByClassName("input");
 
+//checking if one of the input fields has text in it
+let numInputs = document.getElementsByClassName("input")
+for(i=0;i<numInputs.length;i++) {
+numInputs[i].addEventListener("input",conversions);
+}
 
-//let posibleInputs = document.getElementsByClassName("input")
-//document.getElementById("kilograms").addEventListener("input", kale);
-
-
-// let numInputs = document.getElementsByClassName("input")
-// for(i=0;i<numInputs.length;i++) {
-//     numInputs[i].addEventListener("input",conversions);
-// }
 
 function conversions() {
     console.log("conversions");
@@ -331,12 +325,16 @@ function conversions() {
         }
     }
 }
+
+document.getElementById("reset").addEventListener("click", resetInputFields);
+
+function resetInputFields() {
+    for (i=0; i<numInputs.length; i++) {
+        numInputs[i].value = "";
+    }
+}
 }
 
-let button = document.getElementsByClassName("button");
 
-button.addEventListener("click", reset);
 
-function reset(){
-    document.getElementsByClassName("input").value='';
-}
+
