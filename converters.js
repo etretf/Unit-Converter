@@ -1,7 +1,7 @@
 //window onload function to make sure html is loaded before the js begins
 window.onload=function() {
 //reset input fields on reload
-document.getElementsByClassName("input").value='';
+function resetInputFields();
 
 //variable that will store the number of decimal points that the user requests
 //default is 3
@@ -388,37 +388,6 @@ function resetInputFields() {
     for (i=0; i<numInputs.length; i++) {
         //clearing input field
         numInputs[i].value = "";
-    }
-}
-
-//dark-mode and light mode 
-
-
-var modeSwitch = document.getElementsById('modeSwitch');
-if(modeSwitch){
-    initialMode();
-
-    modeSwitch.addEventListener('change', function(event){
-       switchMode();  
-    });
-
-    function initialMode(){
-        var selectedDark = (localStorage.getItem('modeSwitch')!== null &&
-        localStorage.getItem('modeSwitch') === 'dark');
-        modeSwitch.checked = selectedDark;
-       selectedDark ? document.body.setAttribute('mode','dark'):
-       document.body.removeAttribute('mode');
-    }
-
-    function switchMode(){
-        if(modeSwitch.checked){
-            document.body.setAttribute('mode', 'dark');
-            localStorage.setItem('modeSwitch', 'dark')
-        }
-        else {
-            document.body.removeAttribute('mode');
-            localStorage.removeItem('modeSwitch');
-        }
     }
 }
 
