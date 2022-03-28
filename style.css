@@ -38,8 +38,6 @@
     /*align-items:unset;
       justify-content: unset;
       */
-    /*(amy) the toggle wouldn't stay on the top right if they were centered,
-      probably better to style the logo individually.*/
   }
 
   .nav-items {
@@ -229,44 +227,46 @@
     margin: 25px;
   }
 
-.footer {
-  min-height: 10vh;
-  height: auto;
-  background-color: white;
-}
+/*Footer*/
+  .footer {
+    min-height: 10vh;
+    height: 50px;
+    background-color: white;
+  }
 
-.footer-items {
-  width: 78%;
-  margin: 5% auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  font-family: "Ropa Sans", sans-serif;
-}
+  .footer-items {
+    width: 78%;
+    margin: 5% auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Ropa Sans", sans-serif;
+    margin-top: 20px;
+  }
 
-.footer-items:hover {
-  opacity: 70%;
-}
+  .footer-items:hover {
+    opacity: 70%;
+  }
 
-.footer-items a {
-  text-decoration: none;
-  color: #222831;
-}
+  .footer-items a {
+    text-decoration: none;
+    color: #222831;
+  }
 
-.github-logo {
-  width: 50px;
-}
+  .github-logo {
+    width: 50px;
+  }
 
 /*Converter page styling*/
   /*Converter navs*/
     .converters-nav {
       height: 125px;
-      background-color: #ffffff;
+      background-color: white;
       width: 100%;
     }
 
     .nav-converter-links {
-      width: 78%;
+      width: 70%;
       max-width: 1440px;
       margin: auto;
       height: 100%;
@@ -306,6 +306,7 @@
   .converter-section { 
     background-color: #f2f2f2;
     font-family: "Ropa Sans", sans-serif;
+    padding-bottom: 5%;
   }
 
   .converter-section h3 {
@@ -322,46 +323,49 @@
     background-color: white;
     border-radius: 10px;
     padding-bottom: 40px;
+    padding-top: 40px;
   }
 
   .decimal-dropDown {
-    padding-top: 5px;
+    padding-left: 15%;
+    max-width: 85%;
   }
 
-  .unit-type {
-    width: 70%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    border-bottom: 2px solid black;
-  }
+  /*CONNVERSION INPUTS*/
+    .unit-type {
+      width: 70%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 2px solid black;
+    }
 
-  .unit-type h3 {
-    width: 100%;
-  }
+    .unit-type h3 {
+      width: 100%;
+      float: left;
+      margin-left: -3px;
+    }
 
-  .unit-type p {
-    width: 10%;
-    height: 40px;
-    text-align: left;
-    font-size: 18pt;
-  }
+    .unit-type p {
+      width: 10%;
+      height: 40px;
+      text-align: right;
+      font-size: 18pt;
+    }
 
-  .input {
-    width: 90%;
-    outline-style: none;
-    outline: none;
-    border: none;
-    /*border-bottom: 2px solid black;*/
-    padding-bottom: 0;
-    height: 40px;
-  }
-
-  .input:focus {
-    border-color: #cb3b24;
-  }
+    .input {
+      width: 90%;
+      outline-style: none;
+      outline: none;
+      border: none;
+      height: 40px;
+    }
 
 /*Reset button*/
+  .reset-button {
+    margin-top:5%;
+    margin-left: 15%;
+  }
   #reset {
     background-color: #d6d6d6;
     color: black;
@@ -392,40 +396,45 @@
   }
 
   /*styling the elements that are on the banner*/
-  .banner-items {
-    width: 80%;
-    align-items: center;
-    text-align: center;
-  }
+    .banner-items {
+      width: 80%;
+      align-items: center;
+      text-align: center;
+    }
 
-  .banner-items p {
-    font-size: 18pt;
-  }
+    .banner-items p {
+      font-size: 18pt;
+    }
 
-  .converters {
-    min-height: 100vh;
-    padding: 40px 0;
-    background-color: #f2f2f2;
-  }
+    .converters {
+      min-height: 100vh;
+      padding: 40px 0;
+      background-color: #f2f2f2;
+    }
 
-  .converter-links {
-    width: 80%;
-    justify-content: space-between;
-  }
+    .converter-links {
+      width: 80%;
+      justify-content: space-between;
+    }
 
-  .converter-link {
-    min-width: 100px;
-    width: 47%;
-    height: auto;
-    margin: 15px 0;
-    padding: 30pxpx;
-  }
+    .converter-link {
+      min-width: 100px;
+      width: 47%;
+      height: auto;
+      margin: 15px 0;
+      padding: 30px;
+    }
 
-  .converter-link:hover {
-    background-color: #e7e7e7;
-    color: #cb3b24;
-    transition-duration: 0.25s;
-  }
+    .converter-link:hover {
+      background-color: #e7e7e7;
+      color: #cb3b24;
+      transition-duration: 0.25s;
+    }
+
+    .nav-converter-link {
+      width: 40px;
+    }
+
 }
 /*homepage for screenwidth under 500px*/
 @media screen and (max-width: 500px) {
