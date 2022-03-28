@@ -274,6 +274,8 @@ input:checked + .slider:before {
   display: flex;
   justify-content: space-between;
   font-weight: 650;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .nav-converter-link {
@@ -303,6 +305,13 @@ input:checked + .slider:before {
   background-color: #f2f2f2;
 }
 
+.converter-section h3 {
+  padding-top: 20px;
+  font-size: medium;
+  font-style: italic;
+  margin-left: 20%;
+}
+
 .converter-box {
   width: 60%;
   max-width: 810px;
@@ -316,7 +325,6 @@ input:checked + .slider:before {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
 }
 
 .unit-type h3 {
@@ -340,7 +348,7 @@ input:checked + .slider:before {
 .unit-type p {
   width: 10%;
   height: 40px;
-  text-align: center;
+  text-align: left;
   font-size: 18pt;
 }
 
