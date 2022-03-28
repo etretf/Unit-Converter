@@ -5,6 +5,7 @@ document.getElementsByClassName("input").value='';
 
 //dark-mode and light mode 
 
+/*
 var modeSwitch = document.getElementsByClassName('switch');
 if(modeSwitch){
     initialMode();
@@ -34,6 +35,7 @@ if(modeSwitch){
         }
     }
 }
+*/
 
 //variable that will store the number of decimal points that the user requests
 //default is 3
