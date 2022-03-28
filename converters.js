@@ -2,6 +2,8 @@
 window.onload=function() {
 //reset input fields on reload
 document.getElementsByClassName("input").value='';
+let button = document.getElementsbyClassName("button");
+button.addEventListener("click", window.onload);
 
 //variable that will store the number of decimal points that the user requests
 //default is 3
