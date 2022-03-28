@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Time Converter</title>
+    <title>Distance Converter</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!--viewport that will allow webpage to be responsive-->
@@ -36,31 +36,31 @@
       <div class="nav-converter-links">
         <a href="massConverter.html" class="nav-converter-link">
           <div>
-            <img src="/icons/mass-red.png" alt="image of a scale" />
+            <img src="icons/mass-red.png" alt="image of a scale" />
             <p class="converter-type-desc">MASS</p>
           </div>
         </a>
-        <a href="temperature.html" class="nav-converter-link">
+        <a href="temperatureConverter.html" class="nav-converter-link">
           <div>
-            <img src="/icons/thermometer-red.png" alt="image of a thermometer" />
+            <img src="icons/thermometer-red.png" alt="image of a thermometer" />
             <p class="converter-type-desc">TEMPATURE</p>
           </div>
         </a>
         <a href="speedConverter.html" class="nav-converter-link">
           <div>
-            <img src="/icons/speed-red.png" alt="image of a speedometer" />
+            <img src="icons/speed-red.png" alt="image of a speedometer" />
             <p class="converter-type-desc">SPEED</p>
           </div>
         </a>
-        <a href="distance.html" class="nav-converter-link">
+        <a href="timeConverter.html" class="nav-converter-link">
           <div>
-            <img src="/icons/length-red.png" alt="image of a ruler" />
-            <p class="converter-type-desc">LENGTH</p>
+            <img src="icons/time-red.png" alt="image of a clock">
+            <p class="converter-type-desc">TIME</p>
           </div>
         </a>
-        <a href="volumeCoverter.html" class="nav-converter-link">
+        <a href="volumeConverter.html" class="nav-converter-link">
           <div>
-            <img src="/icons/volume-red.png" alt="image of a beaker" />
+            <img src="icons/volume-red.png" alt="image of a beaker" />
             <p class="converter-type-desc">VOLUME</p>
           </div>
         </a>
@@ -69,7 +69,7 @@
 
 
     <section class="converter-section">
-      <h3>TIME CONVERTER</h3>
+      <h3>DISTANCE CONVERTER</h3>
       <!--div that contains the interactive converter elements-->
       <div class="converter-box">
         <!--div that contains the dropdown menu that lets user pick the decimal point amount for the answer display-->
@@ -86,43 +86,48 @@
             <option class="onevALUE" value="8">8</option>
             <option class="onevALUE" value="9">9</option>
             <option class="onevALUE" value="10">10</option>
-        </select>
+          </select>
 
         <div class="input-boxes">
           <div class="unit-type">
-            <h3>Seconds</h3>
-            <input id="second" class="input" type="number" />
-            <p>s</p>
+            <h3>Millimeters</h3>
+            <input id="millimeter" class="input" type="number" />
+            <p>mm</p>
           </div>
           <div class="unit-type">
-            <h3>Minutes</h3>
-            <input id="minute" class="input" type="number" />
-            <p>min</p>
+            <h3>Centimeters</h3>
+            <input id="centimeter" class="input" type="number" />
+            <p>cm</p>
           </div>
           <div class="unit-type">
-            <h3>Hours</h3>
-            <input id="hour" class="input" type="number" />
-            <p>hrs</p>
+            <h3>Meters</h3>
+            <input id="meter" class="input" type="number" />
+            <p>m</p>
           </div>
           <div class="unit-type">
-            <h3>Days</h3>
-            <input id="day" class="input" type="number" />
-            <p>days</p>
-          </div>>
-          <div class="unit-type">
-            <h3>Weeks</h3>
-            <input id="week" class="input" type="number" />
-            <p>weeks</p>
+            <h3>Kilometers</h3>
+            <input id="kilometer" class="input" type="number" />
+            <p>km</p>
           </div>
           <div class="unit-type">
-            <h3>Months</h3>
-            <input id="month" class="input" type="number" />
-            <p>months</p>
+            <h3>Inches</h3>
+            <input id="inch" class="input" type="number" />
+            <p>inch</p>
           </div>
           <div class="unit-type">
-            <h3>Years</h3>
-            <input id="year" class="input" type="number" />
-            <p>years</p>
+            <h3>Feet</h3>
+            <input id="feet" class="input" type="number" />
+            <p>feet</p>
+          </div>
+          <div class="unit-type">
+            <h3>Yards</h3>
+            <input id="yard" class="input" type="number" />
+            <p>yd</p>
+          </div>
+          <div class="unit-type">
+            <h3>Miles</h3>
+            <input id="mile" class="input" type="number" />
+            <p>mi</p>
           </div>
         </div>
         
@@ -143,6 +148,6 @@
 
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="converters.js"></script>
-
+    
   </body>
 </html>
