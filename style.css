@@ -1,58 +1,59 @@
-
-*, *:before, *:after {
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*styling the banner header*/
 h1 {
-    font-family: 'Ropa Sans', sans-serif;
-    font-size: 96px;
+  font-family: "Ropa Sans", sans-serif;
+  font-size: 96px;
 }
 
 h2 {
-    margin: 50px auto;
-    text-align: center;
-    font-family: 'Ropa Sans', sans-serif;
-    font-size: 48pt;
+  margin: 50px auto;
+  text-align: center;
+  font-family: "Ropa Sans", sans-serif;
+  font-size: 48pt;
 }
 
 h4 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14pt;
-    font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 14pt;
+  font-weight: bold;
 }
 
 nav {
-    background-color: #FC4F1B;
-    border: 2px solid black;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    /*align-items:unset;
+  background-color: #fc4f1b;
+  border: 2px solid black;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  /*align-items:unset;
     justify-content: unset;
     */
-    /*(amy) the toggle wouldn't stay on the top right if they were centered,
+  /*(amy) the toggle wouldn't stay on the top right if they were centered,
     probably better to style the logo individually.*/
 }
 
 .nav-items {
-    width: 78%;
-    max-width: 1440px;
-    margin: auto;
-    display: flex;
-    align-items: center; /**/
-    justify-content: space-between; /**/
-    border: 2px solid red;
+  width: 78%;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  align-items: center; /**/
+  justify-content: space-between; /**/
+  border: 2px solid red;
 }
 
 nav img {
-    height: 50px;
+  height: 50px;
 }
 /*DARK-LIGHT MODE BUTTON*/
 
@@ -69,364 +70,351 @@ nav img {
 
 /**/
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
-  
-.switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-  
+
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #CB3B24;
-    -webkit-transition: .4s;
-    transition: .4s;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cb3b24;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
-  
+
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .toggle {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: auto;
-    left: 4px;
-    bottom: 4px;
-    -webkit-transition: .4s;
-    transition: .4s;
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: auto;
+  left: 4px;
+  bottom: 4px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
-  
+
 input:checked + .slider {
-    background-color: rgb(250, 217, 28);
+  background-color: rgb(250, 217, 28);
 }
-  
+
 input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
-  
+
 .slider.round {
-    border-radius: 50px;
+  border-radius: 50px;
 }
-  
+
 .slider.round:before {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 /*Homepage styling*/
 /*styling banner container*/
 .banner {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(#FC4F1B, #F7B132);
-    background-image: url(images/backgroud\ copy.jpg);
-    background-size: cover;
-    padding-top: 30vh;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#fc4f1b, #f7b132);
+  background-image: url(images/backgroud\ copy.jpg);
+  background-size: cover;
+  padding-top: 30vh;
 }
 
 /*styling the elements that are on the banner*/
 .banner-items {
-    width: 78%;
-    max-width: 1440px;
-    margin: auto;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  width: 78%;
+  max-width: 1440px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .banner-items p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 24pt;
+  font-family: "Roboto", sans-serif;
+  font-size: 24pt;
 }
 
 .banner-btn {
-    text-decoration: none;
-    text-align: center;
-    background-color: #F2F2F2;
-    font-family: 'Ropa Sans', sans-serif;
-    font-size: 18pt;
-    color: #222831;
-    padding: 15px;
-    width: 200px;
-    margin-top: 50px;
-    border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #f2f2f2;
+  font-family: "Ropa Sans", sans-serif;
+  font-size: 18pt;
+  color: #222831;
+  padding: 15px;
+  width: 200px;
+  margin-top: 50px;
+  border-radius: 10px;
 }
 
 .banner-btn:hover {
-    background-color: #d6d6d6;
-    color: black;
-    transition-duration: 0.5s;
+  background-color: #d6d6d6;
+  color: black;
+  transition-duration: 0.5s;
 }
-
-
-
 
 /*CONVERTER BUTTONS*/
 .converters {
-    min-height: 100vh;
-    padding: 100px 0;
-    background-color: #F2F2F2;
+  min-height: 100vh;
+  padding: 100px 0;
+  background-color: #f2f2f2;
 }
 
-
 .converter-links {
-    width: 78%;
-    max-width: 1440px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    
+  width: 78%;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .converter-link {
-    text-decoration: none;
-    min-width: 200px;
-    width: 30%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    margin: 30px 0;
-    padding: 40px;
-    border-radius: 10px;
-    background-color: white;
-    color: #CB3B24;
-    font-weight: bold;
+  text-decoration: none;
+  min-width: 200px;
+  width: 30%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin: 30px 0;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: white;
+  color: #cb3b24;
+  font-weight: bold;
 }
 
 .converter-link:hover {
-    background-color: #E7E7E7;
-    color: #CB3B24;
-    transition-duration: 0.25s;
+  background-color: #e7e7e7;
+  color: #cb3b24;
+  transition-duration: 0.25s;
 }
 
 .converter-link p {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .converter-link img {
-    height: 70px;
-    margin: 25px;
+  height: 70px;
+  margin: 25px;
 }
 
-
-
 .footer {
-    min-height: 10vh;
-    height: auto;
-    background-color: white;
+  min-height: 10vh;
+  height: auto;
+  background-color: white;
 }
 
 .footer-items {
-    width: 78%;
-    margin: 5% auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Ropa Sans', sans-serif;
+  width: 78%;
+  margin: 5% auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Ropa Sans", sans-serif;
 }
 
 .footer-items:hover {
-    opacity: 70%;
+  opacity: 70%;
 }
 
 .footer-items a {
-    text-decoration: none;
-    color: #222831;
+  text-decoration: none;
+  color: #222831;
 }
 
 .github-logo {
-    width: 50px;
+  width: 50px;
 }
-
-
-
 
 /*Converter page styling*/
 .converters-nav {
-    height: 125px;
-    background-color: #ffffff;
-    color: white;
-    width: 100%;
+  height: 125px;
+  background-color: #ffffff;
+  color: white;
+  width: 100%;
 }
 
 .nav-converter-links {
-    width: 78%;
-    max-width: 1440px;
-    margin: auto;
-    height: 100%;
-    background-color: #F7B132;
-    display: flex;
-    justify-content: space-between;
+  width: 78%;
+  max-width: 1440px;
+  margin: auto;
+  height: 100%;
+  background-color: #f7b132;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-converter-link {
-    text-align: center;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
 }
 
 .nav-converter-link img {
-    height: 40px;
+  height: 40px;
 }
 
 .nav-converter-link p {
-    margin: 10px;
+  margin: 10px;
 }
 
 .converter-section {
-    background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .converter-box {
-    width: 60%;
-    max-width: 810px;
-    margin: auto;
-    background-color: white;
-    border-radius: 10px;
+  width: 60%;
+  max-width: 810px;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .unit-type {
-    width: 70%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 .unit-type h3 {
-    width: 100%;
+  width: 100%;
 }
 
 .input-field {
-    width: 90%;
-    outline-style: none;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid black;
-    padding-bottom: 0;
-    height: 40px;
+  width: 90%;
+  outline-style: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+  padding-bottom: 0;
+  height: 40px;
 }
 
 .input-field:focus {
-    border-color: #CB3B24;
+  border-color: #cb3b24;
 }
 
 .unit-type p {
-    width: 10%;
-    height: 40px;
-    text-align: center;
-    font-size: 18pt;
+  width: 10%;
+  height: 40px;
+  text-align: center;
+  font-size: 18pt;
 }
 
-/*homepage for screenwisth under 500*/
+/*homepage for screenwidth under 900px*/
 @media screen and (max-width: 900px) {
-    h1{
-        font-size: 48pt;
-    }
+  h1 {
+    font-size: 48pt;
+  }
 
-    h2{
-        font-size: 32pt;
-        margin: 40px auto;
-    }
+  h2 {
+    font-size: 32pt;
+    margin: 40px auto;
+  }
 
-    h4 {
-        font-size: 16pt;
-    }
-    
-    /*styling the elements that are on the banner*/
-    .banner-items {
-        width: 80%;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .banner-items p {
-        font-size: 18pt;
-    }
+  h4 {
+    font-size: 16pt;
+  }
 
-    .converters {
-        min-height: 100vh;
-        padding: 40px 0;
-        background-color: #F2F2F2;
-    }
+  /*styling the elements that are on the banner*/
+  .banner-items {
+    width: 80%;
+    align-items: center;
+    text-align: center;
+  }
 
-    .converter-links {
-        width: 80%;
-        justify-content: space-between;
-    }
-    
-    .converter-link {
-        min-width: 100px;
-        width: 47%;
-        height: auto;
-        margin: 15px 0;
-        padding: 30pxpx;
-    }
-    
-    .converter-link:hover {
-        background-color: #E7E7E7;
-        color: #CB3B24;
-        transition-duration: 0.25s;
-    }
-    
-    
+  .banner-items p {
+    font-size: 18pt;
+  }
+
+  .converters {
+    min-height: 100vh;
+    padding: 40px 0;
+    background-color: #f2f2f2;
+  }
+
+  .converter-links {
+    width: 80%;
+    justify-content: space-between;
+  }
+
+  .converter-link {
+    min-width: 100px;
+    width: 47%;
+    height: auto;
+    margin: 15px 0;
+    padding: 30pxpx;
+  }
+
+  .converter-link:hover {
+    background-color: #e7e7e7;
+    color: #cb3b24;
+    transition-duration: 0.25s;
+  }
 }
-
+/*homepage for screenwidth under 500px*/
 @media screen and (max-width: 500px) {
-    h1{
-        font-size: 36pt;
-    }
+  h1 {
+    font-size: 36pt;
+  }
 
-    h2{
-        font-size: 24pt;
-        margin: 40px auto;
-    }
+  h2 {
+    font-size: 24pt;
+    margin: 40px auto;
+  }
 
-    h4 {
-        font-size: 14pt;
-    }
-    .banner-items {
-        width: 90%;
-    }
+  h4 {
+    font-size: 14pt;
+  }
+  .banner-items {
+    width: 90%;
+  }
 
-    .converter-links {
-        width: 90%;
-        justify-content: space-between;
-    }
+  .converter-links {
+    width: 90%;
+    justify-content: space-between;
+  }
 
-    .converter-link img {
-        height: 50px;
-        margin: 15px;
-    }
+  .converter-link img {
+    height: 50px;
+    margin: 15px;
+  }
 }

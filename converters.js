@@ -312,7 +312,7 @@ function conversions() {
             month.value=inputValue*12;
             break;
 
-        //tempature values
+        //temperature values
         case "celsius":
             console.log("celsius");
             fahrenheit.value = ((inputValue)*(9/5)+32);
