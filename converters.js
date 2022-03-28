@@ -1,7 +1,8 @@
 //window onload function to make sure html is loaded before the js begins
 window.onload=function() {
+    
 //reset input fields on reload
-function resetInputFields();
+//function resetInputFields();
 
 //variable that will store the number of decimal points that the user requests
 //default is 3
