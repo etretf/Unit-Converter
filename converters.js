@@ -336,17 +336,4 @@ function conversions() {
         } 
         */
 }
-
-
-function reset() {
-    let numInputs = document.getElementsByClassName("input")
-    for(i=0;i<numInputs.length;i++) {
-        numInputs[i].value = "";
-    }
-}
-
-}
-
-window.onload = function(){
-    document.getElementsByClassName("input").value='';
 }
