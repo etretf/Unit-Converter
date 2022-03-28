@@ -5,7 +5,7 @@ document.getElementsByClassName("input").value='';
 
 //dark-mode and light mode 
 
-var modeSwitch = document.getElementsByClassName('switch');
+var modeSwitch = document.getElementById('modeSwitch');
 if(modeSwitch){
     initialMode();
 
