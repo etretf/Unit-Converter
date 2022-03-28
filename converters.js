@@ -72,10 +72,10 @@ let fahrenheit = document.getElementById("fahrenheit");
 //document.getElementById("kilograms").addEventListener("input", kale);
 
 
-let numInputs = document.getElementsByClassName("input")
-for(i=0;i<numInputs.length;i++) {
-    numInputs[i].addEventListener("input",conversions);
-}
+// let numInputs = document.getElementsByClassName("input")
+// for(i=0;i<numInputs.length;i++) {
+//     numInputs[i].addEventListener("input",conversions);
+// }
 
 function conversions() {
     console.log("conversions");
@@ -331,4 +331,12 @@ function conversions() {
         }
     }
 }
+}
+
+let button = document.getElementsByClassName("button");
+
+button.addEventListener("click", reset);
+
+function reset(){
+    document.getElementsByClassName("input").value='';
 }
