@@ -2,6 +2,8 @@
 window.onload=function() {
 //reset input fields on reload
 document.getElementsByClassName("input").value='';
+let button = document.getElementsbyClassName("button");
+button.addEventListener("click", window.onload);
 
 //variable that will store the number of decimal points that the user requests
 //default is 3
@@ -328,14 +330,6 @@ function conversions() {
             changeInputDecimal[i].value = parseFloat(changeInputDecimal[i].value).toFixed(decimalNum);
         }
     }
-    /*
-    let changeInputs = document.getElementsByClassName("input");
-        for(i=0;i<changeInputs.length;i++) {
-            if (changeInputs[i].value>1000){
-                changeInputs[i].value = parseFloat(changeInputs[i].value).toExponential(decimalNum);
-            }
-        } 
-        */
 }
 }
 
