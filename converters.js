@@ -1,8 +1,5 @@
 //window onload function to make sure html is loaded before the js begins
 window.onload=function() {
-    
-//reset input fields on reload
-//function resetInputFields();
 
 //variable that will store the number of decimal points that the user requests
 //default is 3
@@ -365,6 +362,24 @@ function conversions() {
     
 }
 
+let GetTheme = JSON.parse(localStorage.getItem("PageTheme"));
+console.log(GetTheme);
+    
+if(GetTheme == "dark") {
+    document.body.classList.toggle("dark-mode");
+    document.getElementById("modeSwitch").checked = true;
+    modeSwitch("dark-mode");
+    /*
+    if (location.pathname === "/index.html"){
+        darkModeToggleHomePage();
+        console.log("TIME");
+    }
+    else {
+        darkModeToggleConverterPage();
+    }
+    */
+}
+
 //function that will change the number of decimal points displayed in the input fields
 //function takes in the id of the input field that the user has entered a number into
 function inputDecimalChange(currentInputId) {
@@ -382,18 +397,107 @@ function inputDecimalChange(currentInputId) {
 
 //event listener will listen for when the reset button is clicked
 //if the button is clicked the resetInputFields function will be called
-document.getElementById("reset").addEventListener("click", resetInputFields);
+//document.getElementById("reset").addEventListener("click", resetInputFields);
 //resetInputFields function will reset all of the input fields
+
+}
 function resetInputFields() {
+    var inputsToClear = document.getElementsByClassName("input");
     //looping through all  of the input fields
-    for (i=0; i<numInputs.length; i++) {
+    for (i=0; i<inputsToClear.length; i++) {
         //clearing input field
-        numInputs[i].value = "";
+        inputsToClear[i].value = "";
     }
 }
 
+function toggleMode() {
+    console.log("hello");
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+
+    //stylinhfor dark mode
+    
+    
+
+    /*
+    if (location.pathname === "/index.html"){
+        //darkModeToggleHomePage();
+        console.log("TIME");
+    }
+    else {
+        darkModeToggleConverterPage();
+    }
+    */
+    let theme;
+    
+    if(element.classList.contains("dark-mode")){
+        document.getElementById("modeSwitch").checked = true;
+        modeSwitch("dark-mode")
+        console.log("dark-mode");
+        theme = "dark";
+    }
+
+    else{
+        document.getElementById("modeSwitch").checked = false;
+        modeSwitch("light-mode") 
+        console.log("light-mode");
+        theme = "light";
+    }
+    //save to localStorage
+
+    localStorage.setItem("PageTheme", JSON.stringify(theme));
 }
 
 
+/*
+function darkModeToggleHomePage() {
+    document.getElementById("converters").classList.toggle("darkModeConverters");
+    let newh4 = document.querySelectorAll("h4");
+    for (i=0;i<newh4.length;i++){
+        newh4[i].classList.toggle("darkModeh4")
+    }
+    let newlinks = document.getElementsByClassName("converter-link");
+    for (i=0; i<newlinks.length;i++) {
+        newlinks[i].classList.toggle("darkModeConverterLink");
+    }
+}
+
+function darkModeToggleConverterPage() {
+   
+}
+*/
+
+function modeSwitch(currentMode) {
+
+    if (currentMode=="dark-mode") {
+        //switching colours to darkmode
+        document.querySelector(":root").style.setProperty("--white","#393E46")
+        document.querySelector(":root").style.setProperty("--offwhite","#222831")
+        document.querySelector(":root").style.setProperty("--offblack","#F2F2F2")
+        document.querySelector(":root").style.setProperty("--red","#F2F2F2")
+        //switching icons to darkmode
+        document.getElementById("massIcon").src = "icons/mass-white.png"
+        document.getElementById("tempIcon").src = "icons/thermometer-white.png"
+        document.getElementById("speedIcon").src = "icons/speed-white.png"
+        document.getElementById("lengthIcon").src = "icons/length-white.png"
+        document.getElementById("timeIcon").src = "icons/time-white.png"
+        document.getElementById("volumeIcon").src = "icons/volume-white.png"
+    }
+    else {
+        //switching colours to lightmode
+        document.querySelector(":root").style.setProperty("--white","white")
+        document.querySelector(":root").style.setProperty("--offwhite","#F2F2F2")
+        document.querySelector(":root").style.setProperty("--offblack","#222831")
+        document.querySelector(":root").style.setProperty("--red","#CB3B24")
+
+        //switching icons to lightmode
+        document.getElementById("massIcon").src = "icons/mass-red.png"
+        document.getElementById("tempIcon").src = "icons/thermometer-red.png"
+        document.getElementById("speedIcon").src = "icons/speed-red.png"
+        document.getElementById("lengthIcon").src = "icons/length-red.png"
+        document.getElementById("timeIcon").src = "icons/time-red.png"
+        document.getElementById("volumeIcon").src = "icons/volume-red.png"
+    }
+}
 
 
