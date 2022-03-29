@@ -10,6 +10,7 @@
 }
 
 :root {
+  --navBar: #FC4F1B;
   --white: white;
   --offwhite: #F2F2F2;
   --red: #CB3B24;
@@ -41,7 +42,7 @@
 
 /*logo and button*/
   nav {
-    background-color: #FC4F1B;
+    background-color: var(--navBar);
     width: 100%;
     height: 70px;
     display: flex;
@@ -85,7 +86,8 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: var(--red);
+      background-color: transparent;
+      border: 2px solid var(--offblack);
       -webkit-transition: 0.4s;
       transition: 0.4s;
     }
@@ -96,8 +98,8 @@
       height: 26px;
       width: 26px;
       left: 4px;
-      bottom: 4px;
-      background-color: var(--white);
+      bottom: 2px;
+      background-color: var(--offblack);
       -webkit-transition: 0.4s;
       transition: 0.4s;
     }
@@ -113,14 +115,16 @@
       transition: 0.4s;
     }
 
+    /*
     #modeSwitch:checked + .slider {
       background-color: rgb(250, 217, 28);
     }
+    */
 
     #modeSwitch:checked + .slider:before {
-      -webkit-transform: translateX(26px);
-      -ms-transform: translateX(26px);
-      transform: translateX(26px);
+      -webkit-transform: translateX(22px);
+      -ms-transform: translateX(22px);
+      transform: translateX(22px);
     }
 
     .slider.round {

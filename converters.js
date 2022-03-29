@@ -470,11 +470,15 @@ function darkModeToggleConverterPage() {
 function modeSwitch(currentMode) {
 
     if (currentMode=="dark-mode") {
+        if (location.pathname != "/index.html") {
+            document.querySelector(":root").style.setProperty("--navBar","#222831")
+        }
         //switching colours to darkmode
         document.querySelector(":root").style.setProperty("--white","#393E46")
         document.querySelector(":root").style.setProperty("--offwhite","#222831")
         document.querySelector(":root").style.setProperty("--offblack","#F2F2F2")
         document.querySelector(":root").style.setProperty("--red","#F2F2F2")
+        document.querySelector(":root").style.setProperty("--iconHover","#5C6572")
         //switching icons to darkmode
         document.getElementById("massIcon").src = "icons/mass-white.png"
         document.getElementById("tempIcon").src = "icons/thermometer-white.png"
@@ -484,11 +488,16 @@ function modeSwitch(currentMode) {
         document.getElementById("volumeIcon").src = "icons/volume-white.png"
     }
     else {
+        if (location.pathname != "/index.html") {
+            document.querySelector(":root").style.setProperty("--navBar","#FC4F1B")
+        }
         //switching colours to lightmode
         document.querySelector(":root").style.setProperty("--white","white")
         document.querySelector(":root").style.setProperty("--offwhite","#F2F2F2")
         document.querySelector(":root").style.setProperty("--offblack","#222831")
         document.querySelector(":root").style.setProperty("--red","#CB3B24")
+        document.querySelector(":root").style.setProperty("--iconHover","#E7E7E7")
+
 
         //switching icons to lightmode
         document.getElementById("massIcon").src = "icons/mass-red.png"
