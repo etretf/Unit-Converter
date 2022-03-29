@@ -26,7 +26,7 @@
         <div class="nav-items">
           <a href="index.html"><img src="logo ezpz.png" alt="image of logo"></a>
           <label class="switch">
-          <input type="checkbox" id="modeSwitch">
+          <input type="checkbox" id="modeSwitch" onclick="toggleMode()">
           <span class="slider round"><img src="images/Lays-Logo.png" alt="toggle" class="toggle"></span>
           </label>
         </div>
@@ -53,7 +53,7 @@
         <a href="massConverter.html" class="converter-link">
           <!--div that contains the elements of the Mass converter link-->
           <div> 
-            <img src="icons/mass-red.png" alt="image of a scale">
+            <img id="masst" src="icons/mass-red.png" alt="image of a scale">
             <h4 class="converter-type-desc">MASS</h4>
           </div>
         </a>
@@ -110,6 +110,9 @@
               </a>
           </div>
       </section>
+
+      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="converters.js"></script>
       
   </body>
 </html>

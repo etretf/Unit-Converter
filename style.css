@@ -9,6 +9,15 @@
   padding: 0;
 }
 
+/*dark-mode*/
+.dark-mode {
+  color: purple;
+}
+
+.imgdarkMode {
+  filter: invert(99%) sepia(79%) saturate(2%) hue-rotate(19deg) brightness(117%) contrast(100%);
+}
+
 /*styling the banner header*/
   h1 {
     font-family: "Ropa Sans", sans-serif;
@@ -102,11 +111,11 @@
       transition: 0.4s;
     }
 
-    input:checked + .slider {
+    #modeSwitch:checked + .slider {
       background-color: rgb(250, 217, 28);
     }
 
-    input:checked + .slider:before {
+    #modeSwitch:checked + .slider:before {
       -webkit-transform: translateX(26px);
       -ms-transform: translateX(26px);
       transform: translateX(26px);

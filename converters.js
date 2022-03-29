@@ -1,8 +1,5 @@
 //window onload function to make sure html is loaded before the js begins
 window.onload=function() {
-    
-//reset input fields on reload
-//function resetInputFields();
 
 //variable that will store the number of decimal points that the user requests
 //default is 3
@@ -365,6 +362,15 @@ function conversions() {
     
 }
 
+let GetTheme = JSON.parse(localStorage.getItem("PageTheme"));
+console.log(GetTheme);
+    
+if(GetTheme == "dark") {
+    document.body.classList.toggle("dark-mode");
+    document.getElementById("modeSwitch").checked = true;
+    document.getElementById("masst").classList.toggle("imgdarkMode");
+}
+
 //function that will change the number of decimal points displayed in the input fields
 //function takes in the id of the input field that the user has entered a number into
 function inputDecimalChange(currentInputId) {
@@ -382,16 +388,39 @@ function inputDecimalChange(currentInputId) {
 
 //event listener will listen for when the reset button is clicked
 //if the button is clicked the resetInputFields function will be called
-document.getElementById("reset").addEventListener("click", resetInputFields);
+//document.getElementById("reset").addEventListener("click", resetInputFields);
 //resetInputFields function will reset all of the input fields
+
+}
 function resetInputFields() {
+    var inputsToClear = document.getElementsByClassName("input");
     //looping through all  of the input fields
-    for (i=0; i<numInputs.length; i++) {
+    for (i=0; i<inputsToClear.length; i++) {
         //clearing input field
-        numInputs[i].value = "";
+        inputsToClear[i].value = "";
     }
 }
 
+function toggleMode() {
+    console.log("hello");
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+    document.getElementById("masst").classList.toggle("imgdarkMode");
+    let theme;
+    
+    if(element.classList.contains("dark-mode")){
+        document.getElementById("modeSwitch").checked = true;
+        console.log("dark-mode");
+        theme = "dark";
+    }
+    else{
+        document.getElementById("modeSwitch").checked = false;
+        console.log("light-mode");
+        theme = "light";
+    }
+    //save to localStorage
+
+    localStorage.setItem("PageTheme", JSON.stringify(theme));
 }
 
 
