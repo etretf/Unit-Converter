@@ -368,7 +368,16 @@ console.log(GetTheme);
 if(GetTheme == "dark") {
     document.body.classList.toggle("dark-mode");
     document.getElementById("modeSwitch").checked = true;
-    iconColour("dark-mode");
+    modeSwitch("dark-mode");
+    /*
+    if (location.pathname === "/index.html"){
+        darkModeToggleHomePage();
+        console.log("TIME");
+    }
+    else {
+        darkModeToggleConverterPage();
+    }
+    */
 }
 
 //function that will change the number of decimal points displayed in the input fields
@@ -408,19 +417,29 @@ function toggleMode() {
 
     //stylinhfor dark mode
     
+    
 
+    /*
+    if (location.pathname === "/index.html"){
+        //darkModeToggleHomePage();
+        console.log("TIME");
+    }
+    else {
+        darkModeToggleConverterPage();
+    }
+    */
     let theme;
     
     if(element.classList.contains("dark-mode")){
         document.getElementById("modeSwitch").checked = true;
-        iconColour("dark-mode")
+        modeSwitch("dark-mode")
         console.log("dark-mode");
         theme = "dark";
     }
 
     else{
         document.getElementById("modeSwitch").checked = false;
-        iconColour("light-mode") 
+        modeSwitch("light-mode") 
         console.log("light-mode");
         theme = "light";
     }
@@ -429,8 +448,33 @@ function toggleMode() {
     localStorage.setItem("PageTheme", JSON.stringify(theme));
 }
 
-function iconColour(currentMode) {
+
+/*
+function darkModeToggleHomePage() {
+    document.getElementById("converters").classList.toggle("darkModeConverters");
+    let newh4 = document.querySelectorAll("h4");
+    for (i=0;i<newh4.length;i++){
+        newh4[i].classList.toggle("darkModeh4")
+    }
+    let newlinks = document.getElementsByClassName("converter-link");
+    for (i=0; i<newlinks.length;i++) {
+        newlinks[i].classList.toggle("darkModeConverterLink");
+    }
+}
+
+function darkModeToggleConverterPage() {
+   
+}
+*/
+
+function modeSwitch(currentMode) {
+
     if (currentMode=="dark-mode") {
+        //switching colours to darkmode
+        document.querySelector(":root").style.setProperty("--white","#393E46")
+        document.querySelector(":root").style.setProperty("--offwhite","#222831")
+        document.querySelector(":root").style.setProperty("--offblack","#F2F2F2")
+        document.querySelector(":root").style.setProperty("--red","#F2F2F2")
         //switching icons to darkmode
         document.getElementById("massIcon").src = "icons/mass-white.png"
         document.getElementById("tempIcon").src = "icons/thermometer-white.png"
@@ -440,6 +484,12 @@ function iconColour(currentMode) {
         document.getElementById("volumeIcon").src = "icons/volume-white.png"
     }
     else {
+        //switching colours to lightmode
+        document.querySelector(":root").style.setProperty("--white","white")
+        document.querySelector(":root").style.setProperty("--offwhite","#F2F2F2")
+        document.querySelector(":root").style.setProperty("--offblack","#222831")
+        document.querySelector(":root").style.setProperty("--red","#CB3B24")
+
         //switching icons to lightmode
         document.getElementById("massIcon").src = "icons/mass-red.png"
         document.getElementById("tempIcon").src = "icons/thermometer-red.png"
