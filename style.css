@@ -23,14 +23,13 @@
 /*styling the banner header*/
   h1 {
     font-family: "Ropa Sans", sans-serif;
-    font-size: 96px;
+    font-size: 80px;
   }
 
   h2 {
-    margin: 50px auto;
     text-align: center;
     font-family: "Ropa Sans", sans-serif;
-    font-size: 48pt;
+    font-size: 32pt;
     color: var(--offblack);
   }
 
@@ -38,6 +37,7 @@
     font-family: "Roboto", sans-serif;
     font-size: 14pt;
     font-weight: bold;
+    margin-top: 25px;
   }
 
 /*logo and button*/
@@ -143,7 +143,7 @@
   background: linear-gradient(#fc4f1b, #f7b132);
   background-image: url(images/backgroud\ copy.jpg);
   background-size: cover;
-  padding-top: 30vh;
+  padding-top: 20vh;
 }
 
 /*styling the elements that are on the banner*/
@@ -151,7 +151,6 @@
     width: 78%;
     max-width: 1440px;
     margin: auto;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,7 +158,7 @@
 
   .banner-items p {
     font-family: "Roboto", sans-serif;
-    font-size: 24pt;
+    font-size: 18pt;
   }
 
   .banner-btn {
@@ -184,7 +183,7 @@
 /*CONVERTER BUTTONS*/
   .converters {
     min-height: 100vh;
-    padding: 100px 0;
+    padding: 70px 0;
     background-color: var(--offwhite);
   }
 
@@ -202,7 +201,7 @@
     text-decoration: none;
     min-width: 200px;
     width: 30%;
-    height: 200px;
+    height: 170px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -223,13 +222,8 @@
     transition-duration: 0.25s;
   }
 
-  .converter-link p {
-    font-family: "Roboto", sans-serif;
-  }
-
   .converter-link img {
     height: 70px;
-    margin: 25px;
   }
 
 /*Footer*/
@@ -295,7 +289,7 @@
     }
 
     .nav-converter-link:hover {
-      background-color: var(--iconHover);
+      opacity: 40%;
       transition-duration: 0.25s;
     }
 
@@ -324,7 +318,9 @@
     padding-top: 20px;
     font-size: medium;
     font-style: italic;
-    margin-left: 20%;
+    width: 60%;
+    max-width: 810px;
+    margin: auto;
   }
 
   .converter-box {
@@ -338,15 +334,27 @@
   }
 
   .decimal-dropDown {
-    padding-left: 15%;
-    max-width: 85%;
+    margin: auto;
+    width: 70%;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+  }
+
+  .decimal-dropDown p {
+    margin: 0 10px;
+    padding: 2% 0;
   }
   
   .form-select {
+    width: 60px;
     background-color: transparent;
     color: var(--offblack);
     border: 1px solid var(--offblack);
   }
+
   .form-select select {
     color: pink;
     background-color: pink;
@@ -386,7 +394,7 @@
       border: none;
       border-bottom: 2px solid var(--offblack);
       background-color: transparent;
-      height: 40px;
+      height: 30px;
       color: var(--offblack);
     }
 
@@ -408,8 +416,8 @@
   }
 
   #reset:hover {
-  background-color: var(--red);
-  color: var(--white);
+  background-color: #CB3B24;
+  color: #F2F2F2;
   transition-duration: 0.25s;
   }
 
