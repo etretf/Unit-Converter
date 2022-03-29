@@ -368,7 +368,7 @@ console.log(GetTheme);
 if(GetTheme == "dark") {
     document.body.classList.toggle("dark-mode");
     document.getElementById("modeSwitch").checked = true;
-    document.getElementById("masst").classList.toggle("imgdarkMode");
+    iconColour("dark-mode");
 }
 
 //function that will change the number of decimal points displayed in the input fields
@@ -405,16 +405,22 @@ function toggleMode() {
     console.log("hello");
     var element = document.body;
     element.classList.toggle("dark-mode");
-    document.getElementById("masst").classList.toggle("imgdarkMode");
+
+    //stylinhfor dark mode
+    
+
     let theme;
     
     if(element.classList.contains("dark-mode")){
         document.getElementById("modeSwitch").checked = true;
+        iconColour("dark-mode")
         console.log("dark-mode");
         theme = "dark";
     }
+
     else{
         document.getElementById("modeSwitch").checked = false;
+        iconColour("light-mode") 
         console.log("light-mode");
         theme = "light";
     }
@@ -423,6 +429,25 @@ function toggleMode() {
     localStorage.setItem("PageTheme", JSON.stringify(theme));
 }
 
-
+function iconColour(currentMode) {
+    if (currentMode=="dark-mode") {
+        //switching icons to darkmode
+        document.getElementById("massIcon").src = "icons/mass-white.png"
+        document.getElementById("tempIcon").src = "icons/thermometer-white.png"
+        document.getElementById("speedIcon").src = "icons/speed-white.png"
+        document.getElementById("lengthIcon").src = "icons/length-white.png"
+        document.getElementById("timeIcon").src = "icons/time-white.png"
+        document.getElementById("volumeIcon").src = "icons/volume-white.png"
+    }
+    else {
+        //switching icons to lightmode
+        document.getElementById("massIcon").src = "icons/mass-red.png"
+        document.getElementById("tempIcon").src = "icons/thermometer-red.png"
+        document.getElementById("speedIcon").src = "icons/speed-red.png"
+        document.getElementById("lengthIcon").src = "icons/length-red.png"
+        document.getElementById("timeIcon").src = "icons/time-red.png"
+        document.getElementById("volumeIcon").src = "icons/volume-red.png"
+    }
+}
 
 

@@ -10,13 +10,14 @@
 }
 
 /*dark-mode*/
+
 .dark-mode {
-  color: purple;
+  color: aqua;
+}
+.convertersDark {
+  color: #5e5453;
 }
 
-.imgdarkMode {
-  filter: invert(99%) sepia(79%) saturate(2%) hue-rotate(19deg) brightness(117%) contrast(100%);
-}
 
 /*styling the banner header*/
   h1 {
@@ -176,7 +177,7 @@
   }
 
 /*CONVERTER BUTTONS*/
-  .converters {
+  .convertersLight {
     min-height: 100vh;
     padding: 100px 0;
     background-color: #f2f2f2;
@@ -299,6 +300,10 @@
     .nav-converter-link p {
       margin: 10px;
       color:#cb3b24;
+    }
+
+    .hiddenIcon {
+      display: none;
     }
 
 /*main section*/

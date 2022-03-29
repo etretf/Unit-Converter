@@ -2,3 +2,12 @@
     color: blue;
     background-color: aqua;
 }
+
+p {
+    width: 400px;
+}
+
+.pdarkMode {
+    color: rgb(0, 0, 0);
+    
+}

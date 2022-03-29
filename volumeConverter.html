@@ -53,7 +53,7 @@
         <a href="massConverter.html" class="nav-converter-link">
           <!--div that contains the elements of the mass converter link-->
           <div>
-            <img src="icons/mass-red.png" alt="image of a scale" />
+            <img id="massIcon" src="icons/mass-red.png" alt="image of a scale" />
             <p class="converter-type-desc">MASS</p>
           </div>
         </a>
@@ -61,7 +61,7 @@
         <a href="temperatureConverter.html" class="nav-converter-link">
           <!--div that contains the elements of the temperature converter link-->
           <div>
-            <img src="icons/thermometer-red.png" alt="image of a thermometer" />
+            <img id="tempIcon" src="icons/thermometer-red.png" alt="image of a thermometer" />
             <p class="converter-type-desc">TEMPERATURE</p>
           </div>
         </a>
@@ -69,7 +69,7 @@
         <a href="speedConverter.html" class="nav-converter-link">
           <!--div that contains the elements of the speed converter link-->
           <div>
-            <img src="icons/speed-red.png" alt="image of a speedometer" />
+            <img id="speedIcon" src="icons/speed-red.png" alt="image of a speedometer" />
             <p class="">SPEED</p>
           </div>
         </a>
@@ -77,7 +77,7 @@
         <a href="distanceConverter.html" class="nav-converter-link">
           <!--div that contains the elements of the length converter link-->
           <div>
-            <img src="icons/length-red.png" alt="image of a ruler" />
+            <img id="lengthIcon" src="icons/length-red.png" alt="image of a ruler" />
             <p class="converter-type-desc">LENGTH</p>
           </div>
         </a>
@@ -85,10 +85,12 @@
         <a href="timeConverter.html" class="nav-converter-link">
           <!--div that contains the elements of the time converter link-->
           <div>
-            <img src="icons/time-red.png" alt="image of a clock" />
+            <img id="timeIcon" src="icons/time-red.png" alt="image of a clock" />
             <p class="converter-type-desc">TIME</p>
           </div>
         </a>
+        <!--hidden icon is so js works properly when changing icon sources-->
+        <div class="hiddenIcon"><img id="volumeIcon" src="icons/volume-red.png"></div>
       </div>
     </section>
 

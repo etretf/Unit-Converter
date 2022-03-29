@@ -23,5 +23,5 @@ let GetTheme = JSON.parse(localStorage.getItem("PageTheme"));
 console.log(GetTheme);
 
 if(GetTheme == "dark") {
-    document.body.classList.toggle("dark-mode");
+    document.getElementById("par").classList.toggle("pdarkMode");
 }
