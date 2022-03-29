@@ -223,7 +223,7 @@
   }
 
   .converter-link img {
-    height: 70px;
+    height: 60px;
   }
 
 /*Footer*/
@@ -355,11 +355,6 @@
     border: 1px solid var(--offblack);
   }
 
-  .form-select select {
-    color: pink;
-    background-color: pink;
-  }
-
   .onevALUE {
     background-color: var(--offwhite);
     color: var(--offblack);
@@ -401,6 +396,12 @@
 
     .input:focus {
       border-bottom: 2px solid #CB3B24;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
 
 /*Reset button*/
