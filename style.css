@@ -482,6 +482,13 @@
     }
 
 }
+/*Converter styling for 700px breakpoint*/
+@media screen and (max-width: 700px){
+ .nav-converter-link p {
+    font-size: 2vw;
+  }
+}
+
 /*homepage for screenwidth under 500px*/
 @media screen and (max-width: 500px) {
   h1 {
@@ -519,7 +526,7 @@
   }
 
   .nav-converter-link img {
-    height: 50px;
+    height: 35px;
   }
 
   .nav-converter-link p {
