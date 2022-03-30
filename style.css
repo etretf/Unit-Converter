@@ -104,15 +104,14 @@
       /*transition: 0.4s;*/
     }
 
-    .toggle {
-      position: absolute;
-      content: "";
-      height: 20px;
-      width: auto;
-      left: 4px;
-      bottom: 4px;
+    .toggle::before {
+      background-color: #222831;
       /*-webkit-transition: 0.4s;*/
       /*transition: 0.4s;*/
+    }
+
+    .toggle:checked {
+      background-color: #CB3B24;
     }
 
     /*
@@ -284,6 +283,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      max-width: 50px;
       padding-left: 5%;
       padding-right: 5%;
     }
@@ -522,14 +522,15 @@
   .converters-nav {
     width: 100%;
     margin: auto;
-    margin-bottom: -10%;
+    margin-bottom: -5%;
+    
   }
 
   .nav-converter-link img {
-    height: 20px;
+    height: 1cm;
   }
 
   .nav-converter-link p {
-    color: transparent;
+    display: none;
   }
 }
