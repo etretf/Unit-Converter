@@ -401,6 +401,7 @@ function inputDecimalChange(currentInputId) {
 //resetInputFields function will reset all of the input fields
 
 }
+
 function resetInputFields() {
     var inputsToClear = document.getElementsByClassName("input");
     //looping through all  of the input fields
@@ -414,20 +415,6 @@ function toggleMode() {
     console.log("hello");
     var element = document.body;
     element.classList.toggle("dark-mode");
-
-    //stylinhfor dark mode
-    
-    
-
-    /*
-    if (location.pathname === "/index.html"){
-        //darkModeToggleHomePage();
-        console.log("TIME");
-    }
-    else {
-        darkModeToggleConverterPage();
-    }
-    */
     let theme;
     
     if(element.classList.contains("dark-mode")){
