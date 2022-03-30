@@ -88,8 +88,8 @@
       bottom: 0;
       background-color: transparent;
       border: 2px solid var(--offblack);
-      -webkit-transition: 0.4s;
-      transition: 0.4s;
+      /*-webkit-transition: 0.4s;*/
+      /*transition: 0.4s;*/
     }
 
     .slider:before {
@@ -100,8 +100,8 @@
       left: 4px;
       bottom: 2px;
       background-color: var(--offblack);
-      -webkit-transition: 0.4s;
-      transition: 0.4s;
+      /*-webkit-transition: 0.4s;*/
+      /*transition: 0.4s;*/
     }
 
     .toggle {
@@ -111,8 +111,8 @@
       width: auto;
       left: 4px;
       bottom: 4px;
-      -webkit-transition: 0.4s;
-      transition: 0.4s;
+      /*-webkit-transition: 0.4s;*/
+      /*transition: 0.4s;*/
     }
 
     /*
@@ -350,9 +350,9 @@
   
   .form-select {
     width: 60px;
-    background-color: transparent;
-    color: var(--offblack);
-    border: 1px solid var(--offblack);
+    background-color: rgb(245, 245, 245);
+    color: #222831;
+    border: 1px solid #222831;
   }
 
   .onevALUE {
