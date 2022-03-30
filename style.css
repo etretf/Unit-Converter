@@ -476,6 +476,24 @@ input::-webkit-inner-spin-button {
   .converter-section h3 {
     width: 80%;
   }
+
+  .decimal-dropDown {
+    margin: auto;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .decimal-dropDown p {
+    margin: 0;
+  }
+
+  .form-select {
+    width: 100%;
+    margin-bottom:60px;
+  }
+
 }
 /*Converter styling for 700px breakpoint*/
 @media screen and (max-width: 700px) {
