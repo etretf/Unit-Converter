@@ -15,7 +15,7 @@
   --offwhite: #F2F2F2;
   --red: #CB3B24;
   --offblack: #222831;
-  --grey: #393E46;
+  --grey: #393e46;
   --iconHover: #E7E7E7;
 }
 
@@ -86,7 +86,6 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: transparent;
       border: 2px solid var(--offblack);
       /*-webkit-transition: 0.4s;*/
       /*transition: 0.4s;*/
@@ -100,25 +99,11 @@
       left: 4px;
       bottom: 2px;
       background-color: var(--offblack);
+      background-image: url(images/toggle-dark.png);
+      background-size: cover;
       /*-webkit-transition: 0.4s;*/
       /*transition: 0.4s;*/
     }
-
-    .toggle::before {
-      background-color: #222831;
-      /*-webkit-transition: 0.4s;*/
-      /*transition: 0.4s;*/
-    }
-
-    .toggle:checked {
-      background-color: #CB3B24;
-    }
-
-    /*
-    #modeSwitch:checked + .slider {
-      background-color: rgb(250, 217, 28);
-    }
-    */
 
     #modeSwitch:checked + .slider:before {
       -webkit-transform: translateX(22px);
@@ -228,7 +213,7 @@
 /*Footer*/
   .footer {
     min-height: 10vh;
-    height: 200px;
+    height: 160px;
     background-color: var(--white);
     padding: 2.5%;
   }
@@ -423,8 +408,7 @@
   transition-duration: 0.25s;
   }
 
-
-
+/*RESPONSIVE DESIGN*/
 /*homepage for screenwidth under 900px*/
 @media screen and (max-width: 900px) {
   h1 {
@@ -519,18 +503,18 @@
   }
 
   /*converter page*/
-  .converters-nav {
-    width: 100%;
-    margin: auto;
-    margin-bottom: -5%;
-    
-  }
+    .converters-nav {
+      width: 100%;
+      margin: auto;
+      margin-bottom: -5%;
+    }
 
-  .nav-converter-link img {
-    height: 1cm;
-  }
+    .nav-converter-link img {
+      height: 1cm;
+      margin-top: -40px;
+    }
 
-  .nav-converter-link p {
-    display: none;
-  }
+    .nav-converter-link p {
+      display: none;
+    }
 }
