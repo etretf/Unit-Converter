@@ -28,7 +28,7 @@
     />
     <!--linking the css stylesheet to the html file-->
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
@@ -38,7 +38,7 @@
       <div class="nav-items">
         <a href="index.html"><img src="logo ezpz.png" alt="image of logo" /></a>
         <label class="switch">
-          <input type="checkbox" id="modeSwitch" onclick="toggleMode()">
+          <input type="checkbox" id="modeSwitch" onclick="toggleMode()" />
           <span class="slider round"
             ><img src="images/Lays-Logo.png" alt="toggle" class="toggle"
           /></span>
@@ -54,7 +54,11 @@
         <a href="massConverter.html" class="nav-converter-link">
           <!--div that contains the elements of the mass converter link-->
           <div>
-            <img id="massIcon" src="icons/mass-red.png" alt="image of a scale" />
+            <img
+              id="massIcon"
+              src="icons/mass-red.png"
+              alt="image of a scale"
+            />
             <p class="converter-type-desc">MASS</p>
           </div>
         </a>
@@ -62,7 +66,11 @@
         <a href="temperatureConverter.html" class="nav-converter-link">
           <!--div that contains the elements of the temperature converter link-->
           <div>
-            <img id="tempIcon" src="icons/thermometer-red.png" alt="image of a thermometer" />
+            <img
+              id="tempIcon"
+              src="icons/thermometer-red.png"
+              alt="image of a thermometer"
+            />
             <p class="converter-type-desc">TEMPERATURE</p>
           </div>
         </a>
@@ -70,7 +78,11 @@
         <a href="speedConverter.html" class="nav-converter-link">
           <!--div that contains the elements of the speed converter link-->
           <div>
-            <img id="speedIcon" src="icons/speed-red.png" alt="image of a speedometer" />
+            <img
+              id="speedIcon"
+              src="icons/speed-red.png"
+              alt="image of a speedometer"
+            />
             <p class="">SPEED</p>
           </div>
         </a>
@@ -78,7 +90,11 @@
         <a href="distanceConverter.html" class="nav-converter-link">
           <!--div that contains the elements of the length converter link-->
           <div>
-            <img id="lengthIcon" src="icons/length-red.png" alt="image of a ruler" />
+            <img
+              id="lengthIcon"
+              src="icons/length-red.png"
+              alt="image of a ruler"
+            />
             <p class="converter-type-desc">LENGTH</p>
           </div>
         </a>
@@ -86,12 +102,18 @@
         <a href="timeConverter.html" class="nav-converter-link">
           <!--div that contains the elements of the time converter link-->
           <div>
-            <img id="timeIcon" src="icons/time-red.png" alt="image of a clock" />
+            <img
+              id="timeIcon"
+              src="icons/time-red.png"
+              alt="image of a clock"
+            />
             <p class="converter-type-desc">TIME</p>
           </div>
         </a>
         <!--hidden icon is so js works properly when changing icon sources-->
-        <div class="hiddenIcon"><img id="volumeIcon" src="icons/volume-red.png"></div>
+        <div class="hiddenIcon">
+          <img id="volumeIcon" src="icons/volume-red.png" />
+        </div>
       </div>
     </section>
 
@@ -106,7 +128,7 @@
             <option class="onevALUE" value="0">0</option>
             <option class="onevALUE" value="1">1</option>
             <option class="onevALUE" value="2">2</option>
-            <option class="onevALUE" value="3">3</option>
+            <option class="onevALUE" value="3" selected>3</option>
             <option class="onevALUE" value="4">4</option>
             <option class="onevALUE" value="5">5</option>
             <option class="onevALUE" value="6">6</option>
@@ -120,27 +142,27 @@
         <div class="input-boxes">
           <div class="unit-type">
             <h3>Millimetre Cubed</h3>
-            <input type="number" id="milimeterCubed" class="input"/>
+            <input type="number" id="milimeterCubed" class="input" />
             <p>mm³</p>
           </div>
           <div class="unit-type">
             <h3>Centimetre Cubed</h3>
-            <input type="number" id="centimeterCubed" class="input"/>
+            <input type="number" id="centimeterCubed" class="input" />
             <p>cm³</p>
           </div>
           <div class="unit-type">
             <h3>Metre Cubed</h3>
-            <input type="number" id="meterCubed" class="input"/>
+            <input type="number" id="meterCubed" class="input" />
             <p>m³</p>
           </div>
           <div class="unit-type">
             <h3>Millilitre</h3>
-            <input type="number" id="mililiter" class="input"/>
+            <input type="number" id="mililiter" class="input" />
             <p>mL</p>
           </div>
           <div class="unit-type">
             <h3>Litre</h3>
-            <input type="number" id="liter" class="input"/>
+            <input type="number" id="liter" class="input" />
             <p>L</p>
           </div>
         </div>
