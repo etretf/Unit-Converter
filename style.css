@@ -454,7 +454,7 @@
     .converters {
       min-height: 100vh;
       padding: 40px 0;
-      background-color: #f2f2f2;
+      background-color: var(--offwhite);
     }
 
     .converter-links {
@@ -466,6 +466,7 @@
       min-width: 100px;
       width: 47%;
       height: auto;
+      min-height: 150px;
       margin: 15px 0;
       padding: 30px;
     }
@@ -478,6 +479,14 @@
 
     .nav-converter-link {
       width: 40px;
+    }
+
+    /*converter page*/
+    .converter-box{
+      width: 80%;
+    }
+    .converter-section h3  {
+      width: 80%;
     }
 
 }
@@ -493,8 +502,9 @@
   }
 
   h4 {
-    font-size: 14pt;
+    font-size: 12pt;
   }
+
   .banner-items {
     width: 90%;
   }
@@ -506,6 +516,12 @@
 
   .converter-link img {
     height: 50px;
-    margin: 15px;
+  }
+
+  /*converter page*/
+  .converters-nav {
+    width: 99%;
+    margin: auto;
+    border: 2px solid red;
   }
 }
