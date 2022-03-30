@@ -100,7 +100,7 @@
       left: 4px;
       bottom: 2px;
       background-color: var(--offblack);
-      background-image: url(images/toggle-dark.png);
+      background-image: url(images/toggle-light.png);
       background-size: cover;
       /*-webkit-transition: 0.4s;*/
       /*transition: 0.4s;*/
