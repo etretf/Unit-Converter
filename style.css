@@ -91,19 +91,6 @@ nav img {
   /*transition: 0.4s;*/
 }
 
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 2px;
-      background-color: var(--offblack);
-      background-image: url(images/toggle-light.png);
-      background-size: cover;
-      /*-webkit-transition: 0.4s;*/
-      /*transition: 0.4s;*/
-    }
 .slider:before {
   position: absolute;
   content: "";
@@ -112,7 +99,7 @@ nav img {
   left: 4px;
   bottom: 2px;
   background-color: var(--offblack);
-  background-image: url(images/toggle-dark.png);
+  background-image: url(images/toggle-light.png);
   background-size: cover;
   /*-webkit-transition: 0.4s;*/
   /*transition: 0.4s;*/
