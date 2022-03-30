@@ -21,56 +21,70 @@
   </head>
 
   <body>
+    <!--nav that contains the main nav with the logo and night mode/light mode switch-->
     <nav>
-      <!--<h1>Unit Converter</h1>
-      <img src="" alt="Moon/Sun dark or light mode" /> -->
+      <!--div that contains all of the nav items-->
       <div class="nav-items">
         <a href="index.html"><img src="logo ezpz.png" alt="image of logo"></a>
+        <!--label that contains the night mode/light mode switch-->
         <label class="switch">
           <input type="checkbox" id="modeSwitch" onclick="toggleMode()">
-        <span class="slider round"><img src="images/Lays-Logo.png" alt="toggle" class="toggle"></span>
+          <span class="slider round"><img src="images/Lays-Logo.png" alt="toggle" class="toggle"></span>
         </label>
       </div>
     </nav>
 
+    <!--section that contains the nav that contains links to different converters-->
     <section class="converters-nav">
+      <!--div that contains all of the links that link to their corresponding converters-->
       <div class="nav-converter-links">
+        <!--link that contains the mass converter link and its elements-->
         <a href="massConverter.html" class="nav-converter-link">
+          <!--div that contains the elements of the mass converter link-->
           <div>
             <img id="massIcon" src="icons/mass-red.png" alt="image of a scale" />
             <p class="converter-type-desc">MASS</p>
           </div>
         </a>
+        <!--link that contains the temperature converter link and its elements-->
         <a href="temperatureConverter.html" class="nav-converter-link">
+          <!--div that contains the elements of the temperature converter link-->
           <div>
             <img id="tempIcon" src="icons/thermometer-red.png" alt="image of a thermometer" />
             <p class="converter-type-desc">TEMPERATURE</p>
           </div>
         </a>
+        <!--link that contains the speed converter link and its elements-->
         <a href="speedConverter.html" class="nav-converter-link">
+          <!--div that contains the elements of the speed converter link-->
           <div>
             <img id="speedIcon" src="icons/speed-red.png" alt="image of a speedometer" />
             <p class="converter-type-desc">SPEED</p>
           </div>
         </a>
+        <!--link that contains the length converter link and its elements-->
         <a href="distanceConverter.html" class="nav-converter-link">
+          <!--div that contains the elements of the length converter link-->
           <div>
             <img id="lengthIcon" src="icons/length-red.png" alt="image of a ruler" />
             <p class="converter-type-desc">LENGTH</p>
           </div>
         </a>
+        <!--link that contains the volume converter link and its elements-->
         <a href="volumeConverter.html" class="nav-converter-link">
+          <!--div that contains the elements of the volume converter link-->
           <div>
             <img id="volumeIcon" src="icons/volume-red.png" alt="image of a beaker" />
             <p class="converter-type-desc">VOLUME</p>
           </div>
         </a>
-        <!--hidden icon is so js works properly when changing icon sources-->
+        <!--hidden icon so js works properly when changing icon sources.
+        Icon is from the converter that is currently displayed on the page(time)-->
         <div class="hiddenIcon"><img id="timeIcon" src="icons/time-red.png"></div>
       </div>
     </section>
 
-
+    <!--section that contains unique converter page elements-->
     <section class="converter-section">
       <h3>TIME CONVERTER</h3>
       <!--div that contains the interactive converter elements-->
@@ -93,59 +107,71 @@
           </select>
         </div>
 
+        <!--div that contains all of the input boxes-->
         <div class="input-boxes">
+          <!--div that contains the seconds input box-->
           <div class="unit-type">
             <h3>Seconds</h3>
             <input id="second" class="input" type="number" />
             <p>s</p>
           </div>
+          <!--div that contains the minutes input box-->
           <div class="unit-type">
             <h3>Minutes</h3>
             <input id="minute" class="input" type="number" />
             <p>min</p>
           </div>
+          <!--div that contains the hours input box-->
           <div class="unit-type">
             <h3>Hours</h3>
             <input id="hour" class="input" type="number" />
-            <p>hrs</p>
+            <p>h</p>
           </div>
+          <!--div that contains the days input box-->
           <div class="unit-type">
             <h3>Days</h3>
             <input id="day" class="input" type="number" />
-            <p>days</p>
+            <p>d</p>
           </div>
+          <!--div that contains the weeks input box-->
           <div class="unit-type">
             <h3>Weeks</h3>
             <input id="week" class="input" type="number" />
             <p>weeks</p>
           </div>
+          <!--div that contains the months input box-->
           <div class="unit-type">
             <h3>Months</h3>
             <input id="month" class="input" type="number" />
-            <p>months</p>
+            <p>mo</p>
           </div>
+          <!--div that contains the years input box-->
           <div class="unit-type">
             <h3>Years</h3>
             <input id="year" class="input" type="number" />
-            <p>years</p>
+            <p>yr</p>
           </div>
         </div>
         
+        <!--div that contains the reset button which resets/clears all of the values in the input boxes-->
         <div class="reset-button">
           <button id="reset" onclick="resetInputFields()">Reset</button>
         </div>
       </div>
     </section>
 
+    <!--section that contains the footer and its elements-->
     <section class="footer">
       <div class="footer-items">
-          <a href="https://github.com/etretf/Unit-Converter" target="_blank"> 
-            <img class="github-logo" src="images/gitHubLogo.png" alt="image of Github logo">
-            <p>View our Github</p>
-          </a>
+        <!--link to the github where our group collaborated on the converter-->
+        <a href="https://github.com/etretf/Unit-Converter" target="_blank"> 
+          <img class="github-logo" src="images/gitHubLogo.png" alt="image of Github logo">
+          <p>View our Github</p>
+        </a>
       </div>
-  </section>
+    </section>
 
+    <!--linking the js to the html file-->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="converters.js"></script>
 
