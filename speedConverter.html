@@ -40,6 +40,7 @@
     <div class="nav-converter-links">
       <!--link that contains the mass converter link and its elements-->
       <a href="massConverter.html"  class="nav-converter-link">
+        <!--div that contains the elements of the mass converter link-->
         <div>
           <img id="massIcon" src="icons/mass-red.png" alt="image of a scale">
           <p class="converter-type-desc">MASS</p>
@@ -47,6 +48,7 @@
       </a>
       <!--link that contains the temperature converter link and its elements-->
       <a href="temperatureConverter.html" class="nav-converter-link">
+        <!--div that contains the elements of the temperature converter link-->
         <div >
           <img id="tempIcon" src="icons/thermometer-red.png" alt="image of a thermometer">
           <p class="converter-type-desc">TEMPERATURE</p>
@@ -54,6 +56,7 @@
       </a>
       <!--link that contains the length converter link and its elements-->
       <a href="distanceConverter.html" class="nav-converter-link">
+        <!--div that contains the elements of the length converter link-->
         <div >
           <img id="lengthIcon" src="icons/length-red.png" alt="image of a ruler">
           <p class="">LENGTH</p>
@@ -61,6 +64,7 @@
       </a>
       <!--link that contains the time converter link and its elements-->
       <a href="timeConverter.html" class="nav-converter-link">
+        <!--div that contains the elements of the time converter link-->
         <div >
           <img id="timeIcon" src="icons/time-red.png" alt="image of a clock">
           <p class="converter-type-desc">TIME</p>
@@ -68,12 +72,14 @@
       </a>
       <!--link that contains the volume converter link and its elements-->
       <a href="volumeConverter.html" class="nav-converter-link">
+        <!--div that contains the elements of the volume converter link-->
         <div >
           <img id="volumeIcon" src="icons/volume-red.png" alt="image of a beaker">
           <p class="converter-type-desc">VOLUME</p>
         </div>
       </a>
-      <!--hidden icon is so js works properly when changing icon sources-->
+      <!--hidden icon so js works properly when changing icon sources\
+        Icon is from the converter that is currently displayed on the page(speed)-->
       <div class="hiddenIcon"><img id="speedIcon" src="icons/speed-red.png"></div>
     </div>
   </section>
@@ -102,17 +108,21 @@
         </select>
       </div>
 
+      <!--div that contains all of the input boxes-->
       <div class="input-boxes">
+        <!--div that contains the meters per second input box-->
         <div class="unit-type">
           <h3>Metres per second</h3>
           <input type="number" id="meterPerSecond" class="input">
           <p>m/s</p>
         </div>
+        <!--div that contains the kilometer per hour input box-->
         <div class="unit-type">
           <h3>Kilometres per hour</h3>
           <input type="number" id="kilometerPerHour" class="input">
           <p>k/h</p>
         </div>
+        <!--div that contains the mile per hour input box-->
         <div class="unit-type">
           <h3>Miles per hour</h3>
           <input type="number" id="MilePerHour" class="input">
@@ -120,21 +130,25 @@
         </div>
       </div>
       
+      <!--div that contains the reset button which resets/clears all of the values in the input boxes-->
       <div class="reset-button">
         <button id="reset" onclick="resetInputFields()">Reset</button>
       </div>
     </div>
   </section>
 
+  <!--section that contains the footer and its elements-->
   <section class="footer">
     <div class="footer-items">
-        <a href="https://github.com/etretf/Unit-Converter" target="_blank"> 
-          <img class="github-logo" src="images/gitHubLogo.png" alt="image of Github logo">
-          <p>View our Github</p>
-        </a>
+      <!--link to the github where our group collaborated on the converter-->
+      <a href="https://github.com/etretf/Unit-Converter" target="_blank"> 
+        <img class="github-logo" src="images/gitHubLogo.png" alt="image of Github logo">
+        <p>View our Github</p>
+      </a>
     </div>
   </section>
 
+  <!--linking the js to the html file-->
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   <script src="converters.js"></script>
 

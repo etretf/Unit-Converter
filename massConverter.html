@@ -19,123 +19,149 @@
     <link rel="stylesheet" href="style.css"> 
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
+  <!--nav that contains the main nav with the logo and night mode/light mode switch-->
   <nav>
-    <!--<h1>Unit Converter</h1>
-    <img src="" alt="Moon/Sun dark or light mode" /> -->
+    <!--div that contains all of the nav items-->
     <div class="nav-items">
       <a href="index.html"><img src="logo ezpz.png" alt="image of logo"></a>
+      <!--label that contains the night mode/light mode switch-->
       <label class="switch">
         <input type="checkbox" id="modeSwitch" onclick="toggleMode()">
-      <span class="slider round"><img src="images/Lays-Logo.png" alt="toggle" class="toggle"></span>
+        <span class="slider round"><img src="images/Lays-Logo.png" alt="toggle" class="toggle"></span>
       </label>
     </div>
   </nav>
 
-    <section class="converters-nav">
-        <div class="nav-converter-links">
-              <a href="temperatureConverter.html"  class="nav-converter-link">
-                <div>
-                  <img id="tempIcon" src="icons/thermometer-red.png" alt="image of a thermometer">
-                  <p class="converter-type-desc">TEMPERATURE</p>
-                </div>
-              </a>
-              <a href="speedConverter.html" class="nav-converter-link">
-                <div >
-                  <img id="speedIcon" src="icons/speed-red.png" alt="image of a speedometer">
-                  <p class="converter-type-desc">SPEED</p>
-                </div>
-              </a>
-              <a href="distanceConverter.html" class="nav-converter-link">
-                <div>
-                  <img id="lengthIcon" src="icons/length-red.png" alt="image of a ruler">
-                  <p class="">LENGTH</p>
-                </div>
-              </a>
-              <a href="timeConverter.html" class="nav-converter-link">
-                <div>
-                  <img id="timeIcon" src="icons/time-red.png" alt="image of a clock">
-                  <p class="converter-type-desc">TIME</p>
-                </div>
-              </a>
-              <a href="volumeConverter.html" class="nav-converter-link">
-                <div>
-                  <img id="volumeIcon" src="icons/volume-red.png" alt="image of a beaker">
-                  <p class="converter-type-desc">VOLUME</p>
-                </div>
-              </a>
-              <!--hidden icon is so js works properly when changing icon sources-->
-              <div class="hiddenIcon"><img id="massIcon" src="icons/mass-red.png"></div>
+  <!--section that contains the nav that contains links to different converters-->
+  <section class="converters-nav">
+    <!--div that contains all of the links that link to their corresponding converters-->
+    <div class="nav-converter-links">
+      <!--link that contains the temperature converter link and its elements-->
+      <a href="temperatureConverter.html"  class="nav-converter-link">
+        <!--div that contains the elements of the temperature converter link-->
+        <div>
+          <img id="tempIcon" src="icons/thermometer-red.png" alt="image of a thermometer">
+          <p class="converter-type-desc">TEMPERATURE</p>
         </div>
-    </section>
-
-    <!--section that contains unique converter page elements-->
-    <section class="converter-section">
-      <h3>MASS CONVERTER</h3>
-      <!--div that contains the interactive converter elements-->
-      <div class="converter-box">
-        <!--div that contains the dropdown menu that lets user pick the decimal point amount for the answer display-->
-        <div class="decimal-dropDown">
-          <p>Decimal Points</p>
-          <select class="form-select">
-            <option class="onevALUE" value="0">0</option>
-            <option class="onevALUE" value="1">1</option>
-            <option class="onevALUE" value="2">2</option>
-            <option class="onevALUE" value="3" selected>3</option>
-            <option class="onevALUE" value="4">4</option>
-            <option class="onevALUE" value="5">5</option>
-            <option class="onevALUE" value="6">6</option>
-            <option class="onevALUE" value="7">7</option>
-            <option class="onevALUE" value="8">8</option>
-            <option class="onevALUE" value="9">9</option>
-            <option class="onevALUE" value="10">10</option>
-          </select>
+      </a>
+      <!--link that contains the speed converter link and its elements-->
+      <a href="speedConverter.html" class="nav-converter-link">
+        <!--div that contains the elements of the speed converter link-->
+        <div >
+          <img id="speedIcon" src="icons/speed-red.png" alt="image of a speedometer">
+          <p class="converter-type-desc">SPEED</p>
         </div>
-
-        <div class="input-boxes">
-          <div class="unit-type">
-            <h3>Grams</h3>
-            <input type="number" id="grams" class="input">
-            <p>g</p>
-          </div>
-          <div class="unit-type">
-            <h3>Kilograms</h3>
-            <input type="number" id="kilograms" class="input">
-            <p>kg</p>
-          </div>
-          <div class="unit-type">
-            <h3>Tons</h3>
-            <input type="number" id="tons" class="input">
-            <p>t</p>
-          </div>
-          <div class="unit-type">
-            <h3>Pounds</h3>
-            <input type="number" id="pounds" class="input">
-            <p>lb</p>
-          </div>
-          <div class="unit-type">
-            <h3>Ounces</h3>
-            <input type="number" id="ounces" class="input">
-            <p>oz</p>
-          </div>
+      </a>
+      <!--link that contains the length converter link and its elements-->
+      <a href="distanceConverter.html" class="nav-converter-link">
+        <!--div that contains the elements of the length converter link-->
+        <div>
+          <img id="lengthIcon" src="icons/length-red.png" alt="image of a ruler">
+          <p class="">LENGTH</p>
         </div>
-        
-        <div class="reset-button">
-          <button id="reset" onclick="resetInputFields()">Reset</button>
+      </a>
+      <!--link that contains the time converter link and its elements-->
+      <a href="timeConverter.html" class="nav-converter-link">
+        <!--div that contains the elements of the time converter link-->
+        <div>
+          <img id="timeIcon" src="icons/time-red.png" alt="image of a clock">
+          <p class="converter-type-desc">TIME</p>
         </div>
-      </div>
-    </section>
-
-    <section class="footer">
-      <div class="footer-items">
-          <a href="https://github.com/etretf/Unit-Converter" target="_blank"> 
-            <img class="github-logo" src="images/gitHubLogo.png" alt="image of Github logo">
-            <p>View our Github</p>
-          </a>
-      </div>
+      </a>
+      <!--link that contains the volume converter link and its elements-->
+      <a href="volumeConverter.html" class="nav-converter-link">
+        <!--div that contains the elements of the volume converter link-->
+        <div>
+          <img id="volumeIcon" src="icons/volume-red.png" alt="image of a beaker">
+          <p class="converter-type-desc">VOLUME</p>
+        </div>
+      </a>
+      <!--hidden icon so js works properly when changing icon sources\
+        Icon is from the converter that is currently displayed on the page(mass)-->
+      <div class="hiddenIcon"><img id="massIcon" src="icons/mass-red.png"></div>
+    </div>
   </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="converters.js"></script>
+  <!--section that contains unique converter page elements-->
+  <section class="converter-section">
+    <h3>MASS CONVERTER</h3>
+    <!--div that contains the interactive converter elements-->
+    <div class="converter-box">
+      <!--div that contains the dropdown menu that lets user pick the decimal point amount for the answer display-->
+      <div class="decimal-dropDown">
+        <p>Decimal Points</p>
+        <select class="form-select">
+          <option class="onevALUE" value="0">0</option>
+          <option class="onevALUE" value="1">1</option>
+          <option class="onevALUE" value="2">2</option>
+          <option class="onevALUE" value="3" selected>3</option>
+          <option class="onevALUE" value="4">4</option>
+          <option class="onevALUE" value="5">5</option>
+          <option class="onevALUE" value="6">6</option>
+          <option class="onevALUE" value="7">7</option>
+          <option class="onevALUE" value="8">8</option>
+          <option class="onevALUE" value="9">9</option>
+          <option class="onevALUE" value="10">10</option>
+        </select>
+      </div>
+
+      <!--div that contains all of the input boxes-->
+      <div class="input-boxes">
+        <!--div that contains the grams input box-->
+        <div class="unit-type">
+          <h3>Grams</h3>
+          <input type="number" id="grams" class="input">
+          <p>g</p>
+        </div>
+        <!--div that contains the kilograms input box-->
+        <div class="unit-type">
+          <h3>Kilograms</h3>
+          <input type="number" id="kilograms" class="input">
+          <p>kg</p>
+        </div>
+        <!--div that contains the tons input box-->
+        <div class="unit-type">
+          <h3>Tons</h3>
+          <input type="number" id="tons" class="input">
+          <p>t</p>
+        </div>
+        <!--div that contains the pounds input box-->
+        <div class="unit-type">
+          <h3>Pounds</h3>
+          <input type="number" id="pounds" class="input">
+          <p>lb</p>
+        </div>
+        <!--div that contains the ounces input box-->
+        <div class="unit-type">
+          <h3>Ounces</h3>
+          <input type="number" id="ounces" class="input">
+          <p>oz</p>
+        </div>
+      </div>
+      
+      <!--div that contains the reset button which resets/clears all of the values in the input boxes-->
+      <div class="reset-button">
+        <button id="reset" onclick="resetInputFields()">Reset</button>
+      </div>
+    </div>
+  </section>
+
+  <!--section that contains the footer and its elements-->
+  <section class="footer">
+    <div class="footer-items">
+      <!--link to the github where our group collaborated on the converter-->
+      <a href="https://github.com/etretf/Unit-Converter" target="_blank"> 
+        <img class="github-logo" src="images/gitHubLogo.png" alt="image of Github logo">
+        <p>View our Github</p>
+      </a>
+    </div>
+  </section>
+
+  <!--linking the js to the html file-->
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="converters.js"></script>
+
 </body>
 </html>
