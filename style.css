@@ -370,6 +370,7 @@ nav img {
   outline-style: none;
   outline: none;
   border: none;
+  border-radius: 0;
   border-bottom: 2px solid var(--offblack);
   background-color: transparent;
   height: 30px;
