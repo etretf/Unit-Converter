@@ -459,37 +459,40 @@ function modeSwitch(currentMode) {
 
     if (currentMode=="dark-mode") {
         //switching colours to darkmode
-        document.querySelector(":root").style.setProperty("--navBar","#222831")
-        document.querySelector(":root").style.setProperty("--white","#393E46")
-        document.querySelector(":root").style.setProperty("--offwhite","#222831")
-        document.querySelector(":root").style.setProperty("--offblack","#F2F2F2")
-        document.querySelector(":root").style.setProperty("--red","#F2F2F2")
-        document.querySelector(":root").style.setProperty("--iconHover","#5C6572")
+        document.querySelector(":root").style.setProperty("--navBar","#222831");
+        document.querySelector(":root").style.setProperty("--white","#393E46");
+        document.querySelector(":root").style.setProperty("--offwhite","#222831");
+        document.querySelector(":root").style.setProperty("--offblack","#F2F2F2");
+        document.querySelector(":root").style.setProperty("--red","#F2F2F2");
+        document.querySelector(":root").style.setProperty("--iconHover","#5C6572");
         //switching icons to darkmode
-        document.getElementById("massIcon").src = "icons/mass-white.png"
-        document.getElementById("tempIcon").src = "icons/thermometer-white.png"
-        document.getElementById("speedIcon").src = "icons/speed-white.png"
-        document.getElementById("lengthIcon").src = "icons/length-white.png"
-        document.getElementById("timeIcon").src = "icons/time-white.png"
-        document.getElementById("volumeIcon").src = "icons/volume-white.png"
+        document.getElementById("massIcon").src = "icons/mass-white.png";
+        document.getElementById("tempIcon").src = "icons/thermometer-white.png";
+        document.getElementById("speedIcon").src = "icons/speed-white.png";
+        document.getElementById("lengthIcon").src = "icons/length-white.png";
+        document.getElementById("timeIcon").src = "icons/time-white.png";
+        document.getElementById("volumeIcon").src = "icons/volume-white.png";
+        document.getElementById("githubLogo").src = "images/gitHubLogo-darkMode.png";
     }
+
     else {
         //switching colours to lightmode
-        document.querySelector(":root").style.setProperty("--navBar","#FC4F1B")
-        document.querySelector(":root").style.setProperty("--white","white")
-        document.querySelector(":root").style.setProperty("--offwhite","#F2F2F2")
-        document.querySelector(":root").style.setProperty("--offblack","#222831")
-        document.querySelector(":root").style.setProperty("--red","#CB3B24")
-        document.querySelector(":root").style.setProperty("--iconHover","#E7E7E7")
+        document.querySelector(":root").style.setProperty("--navBar","#FC4F1B");
+        document.querySelector(":root").style.setProperty("--white","white");
+        document.querySelector(":root").style.setProperty("--offwhite","#F2F2F2");
+        document.querySelector(":root").style.setProperty("--offblack","#222831");
+        document.querySelector(":root").style.setProperty("--red","#CB3B24");
+        document.querySelector(":root").style.setProperty("--iconHover","#E7E7E7");
 
 
         //switching icons to lightmode
-        document.getElementById("massIcon").src = "icons/mass-red.png"
-        document.getElementById("tempIcon").src = "icons/thermometer-red.png"
-        document.getElementById("speedIcon").src = "icons/speed-red.png"
-        document.getElementById("lengthIcon").src = "icons/length-red.png"
-        document.getElementById("timeIcon").src = "icons/time-red.png"
-        document.getElementById("volumeIcon").src = "icons/volume-red.png"
+        document.getElementById("massIcon").src = "icons/mass-red.png";
+        document.getElementById("tempIcon").src = "icons/thermometer-red.png";
+        document.getElementById("speedIcon").src = "icons/speed-red.png";
+        document.getElementById("lengthIcon").src = "icons/length-red.png";
+        document.getElementById("timeIcon").src = "icons/time-red.png";
+        document.getElementById("volumeIcon").src = "icons/volume-red.png";
+        document.getElementById("githubLogo").src = "images/gitHubLogo-lightMode.png";
     }
 }
 

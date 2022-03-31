@@ -51,7 +51,7 @@ nav {
       */
 }
 
-.nav-items {
+.navItems {
   width: 78%;
   max-width: 1440px;
   margin: auto;
@@ -137,7 +137,7 @@ nav img {
 }
 
 /*styling the elements that are on the banner*/
-.banner-items {
+.bannerItems {
   width: 78%;
   max-width: 1440px;
   margin: auto;
@@ -146,12 +146,12 @@ nav img {
   justify-content: center;
 }
 
-.banner-items p {
+.bannerItems p {
   font-family: "Roboto", sans-serif;
   font-size: 18pt;
 }
 
-.banner-btn {
+#bannerBtn {
   text-decoration: none;
   text-align: center;
   background-color: var(--offwhite);
@@ -164,7 +164,7 @@ nav img {
   border-radius: 10px;
 }
 
-.banner-btn:hover {
+#bannerBtn:hover {
   background-color: var(--iconHover);
   color: var(--offblack);
   transition-duration: 0.5s;
@@ -177,7 +177,7 @@ nav img {
   background-color: var(--offwhite);
 }
 
-.converter-links {
+.converterLinks {
   width: 78%;
   max-width: 1440px;
   margin: auto;
@@ -187,7 +187,7 @@ nav img {
   justify-content: space-between;
 }
 
-.converter-link {
+.converterLink {
   text-decoration: none;
   min-width: 200px;
   width: 30%;
@@ -206,56 +206,56 @@ nav img {
   font-weight: bold;
 }
 
-.converter-link:hover {
+.converterLink:hover {
   background-color: var(--iconHover);
   color: var(--red);
   transition-duration: 0.25s;
 }
 
-.converter-link img {
+.converterLink img {
   height: 60px;
 }
 
 /*Footer*/
 .footer {
-  min-height: 10vh;
-  height: 200px;
+  height: 150px;
   background-color: var(--white);
-  padding: 2.5%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
-.footer-items {
+.footerItems {
   width: 78%;
   margin: auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   font-family: "Ropa Sans", sans-serif;
-  margin-top: 20px;
 }
 
-.footer-items:hover {
+.footerItems:hover {
   opacity: 70%;
 }
 
-.footer-items a {
+.footerItems a {
   text-decoration: none;
   color: var(--offblack);
 }
 
-.github-logo {
+#githubLogo {
   width: 50px;
 }
 
 /*Converter page styling*/
 /*Converter navs*/
-.converters-nav {
+.convertersNav {
   height: 125px;
   background-color: var(--white);
   width: 100%;
 }
 
-.nav-converter-links {
+.navConverterLinks {
   width: 70%;
   max-width: 1440px;
   margin: auto;
@@ -268,7 +268,7 @@ nav img {
   flex-wrap: wrap;
 }
 
-.nav-converter-link {
+.navConverterLink {
   text-align: center;
   text-decoration: none;
   display: flex;
@@ -279,16 +279,16 @@ nav img {
   padding-right: 5%;
 }
 
-.nav-converter-link:hover {
+.navConverterLink:hover {
   opacity: 40%;
   transition-duration: 0.25s;
 }
 
-.nav-converter-link img {
+.navConverterLink img {
   height: 40px;
 }
 
-.nav-converter-link p {
+.navConverterLink p {
   margin: 10px;
   color: var(--red);
 }
@@ -298,7 +298,7 @@ nav img {
 }
 
 /*main section*/
-.converter-section {
+.converterSection {
   background-color: var(--offwhite);
   font-family: "Ropa Sans", sans-serif;
   color: var(--offblack);
@@ -306,7 +306,7 @@ nav img {
   min-height: 100vh;
 }
 
-.converter-section h3 {
+.converterSection h3 {
   padding-top: 20px;
   font-size: medium;
   font-style: italic;
@@ -315,7 +315,7 @@ nav img {
   margin: auto;
 }
 
-.converter-box {
+.converterBox {
   width: 60%;
   max-width: 810px;
   margin: auto;
@@ -325,7 +325,7 @@ nav img {
   padding-top: 40px;
 }
 
-.decimal-dropDown {
+.decimalDropdown {
   margin: auto;
   width: 70%;
   height: 45px;
@@ -335,7 +335,7 @@ nav img {
   align-content: center;
 }
 
-.decimal-dropDown p {
+.decimalDropdown p {
   margin: 0 10px;
   padding: 2% 0;
 }
@@ -353,7 +353,7 @@ nav img {
 }
 
 /*CONNVERSION INPUTS*/
-.unit-type {
+.unitType {
   width: 70%;
   height: 80px;
   margin: auto;
@@ -361,7 +361,7 @@ nav img {
   flex-wrap: wrap;
 }
 
-.unit-type h3 {
+.unitType h3 {
   width: 100%;
 }
 
@@ -376,7 +376,7 @@ nav img {
   color: var(--offblack);
 }
 
-.unit-type p {
+.unitType p {
   width: 10%;
   height: 30px; /*40px*/
   padding-left: 10px;
@@ -395,7 +395,7 @@ input::-webkit-inner-spin-button {
 }
 
 /*Reset button*/
-.reset-button {
+.resetBtn {
   margin: 5% auto auto auto;
   width: 70%;
 }
@@ -430,13 +430,13 @@ input::-webkit-inner-spin-button {
   }
 
   /*styling the elements that are on the banner*/
-  .banner-items {
+  .bannerItems {
     width: 80%;
     align-items: center;
     text-align: center;
   }
 
-  .banner-items p {
+  .bannerItems p {
     font-size: 18pt;
   }
 
@@ -446,12 +446,12 @@ input::-webkit-inner-spin-button {
     background-color: var(--offwhite);
   }
 
-  .converter-links {
+  .converterLinks {
     width: 80%;
     justify-content: space-between;
   }
 
-  .converter-link {
+  .converterLink {
     min-width: 100px;
     width: 47%;
     height: auto;
@@ -460,25 +460,25 @@ input::-webkit-inner-spin-button {
     padding: 30px;
   }
 
-  .converter-link:hover {
+  .converterLink:hover {
     background-color: var(--iconHover);
     color: var(--red);
     transition-duration: 0.25s;
   }
 
-  .nav-converter-link {
+  .navConverterLink {
     width: 40px;
   }
 
   /*converter page*/
-  .converter-box {
+  .converterBox {
     width: 80%;
   }
-  .converter-section h3 {
+  .converterSection h3 {
     width: 80%;
   }
 
-  .decimal-dropDown {
+  .decimalDropdown {
     width: 70%;
     height: 80px;
     flex-direction: column;
@@ -486,7 +486,7 @@ input::-webkit-inner-spin-button {
     align-content: center;
   }
   
-  .decimal-dropDown p {
+  .decimalDropdown p {
     margin: 0;
     padding-top: 0;
   }
@@ -495,17 +495,17 @@ input::-webkit-inner-spin-button {
     width: 100%;
   }
 
-  .unit-type h3 {
+  .unitType h3 {
     width: 100%;
   }
 
 }
 /*Converter styling for 700px breakpoint*/
 @media screen and (max-width: 700px) {
-  .nav-converter-links {
+  .navConverterLinks {
     width: 90%;
   }
-  .nav-converter-link p {
+  .navConverterLink p {
     font-size: 2vw;
     /*font-size: 12px;*/
   }
@@ -526,60 +526,60 @@ input::-webkit-inner-spin-button {
     font-size: 12pt;
   }
 
-  .nav-items {
+  .navItems {
     width: 90%;
   }
   
-  .banner-items {
+  .bannerItems {
     width: 90%;
   }
 
-  .converter-links {
+  .converterLinks {
     width: 90%;
     min-height: 130px;
     justify-content: space-between;
   }
 
-  .converter-link img {
+  .converterLink img {
     height: 50px;
   }
 
   /*converter page*/
-  .converters-nav {
+  .convertersNav {
     width: 100%;
     height: 80px;
     margin: auto;
   }
 
-  .nav-converter-link img {
+  .navConverterLink img {
     height: 35px;
   }
 
-  .nav-converter-link p {
+  .navConverterLink p {
     display: none;
   }
 
-  .converter-box {
+  .converterBox {
     width: 90%;
   }
 
-  .converter-section h3 {
+  .converterSection h3 {
     width: 90%;
   }
 
-  .decimal-dropDown {
+  .decimalDropdown {
     width: 80%;
   }
 
-  .unit-type {
+  .unitType {
     width: 80%;
   }
 
-  .unit-type h3{
+  .unitType h3{
     width: 100%;
   }
 
-  .reset-button {
+  .resetBtn {
     width: 80%;
   }
 
