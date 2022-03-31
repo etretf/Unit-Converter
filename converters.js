@@ -4,6 +4,7 @@ window.onload=function() {
 //variable that will store the number of decimal points that the user requests
 //default is 3
 let decimalNum = 3;
+console.log(decimalNum)
 //drop down menu for the decimal values
 $(document).ready(function(){
     //jquery will monitor if a decimal value from the dropdown menu was selected
