@@ -303,6 +303,7 @@ nav img {
   font-family: "Ropa Sans", sans-serif;
   color: var(--offblack);
   padding-bottom: 5%;
+  min-height: 100vh;
 }
 
 .converter-section h3 {
@@ -354,6 +355,7 @@ nav img {
 /*CONNVERSION INPUTS*/
 .unit-type {
   width: 70%;
+  height: 80px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -361,16 +363,6 @@ nav img {
 
 .unit-type h3 {
   width: 100%;
-  float: left;
-  margin-left: -3px;
-}
-
-.unit-type p {
-  width: 10%;
-  height: 40px;
-  padding-left: 10px;
-  text-align: left;
-  font-size: 14pt;
 }
 
 .input {
@@ -382,6 +374,14 @@ nav img {
   background-color: transparent;
   height: 30px;
   color: var(--offblack);
+}
+
+.unit-type p {
+  width: 10%;
+  height: 30px; /*40px*/
+  padding-left: 10px;
+  text-align: left;
+  font-size: 14pt;
 }
 
 .input:focus {
@@ -396,15 +396,16 @@ input::-webkit-inner-spin-button {
 
 /*Reset button*/
 .reset-button {
-  margin-top: 5%;
-  margin-left: 15%;
+  margin: 5% auto auto auto;
+  width: 70%;
 }
+
 #reset {
   background-color: var(--iconHover);
-  color: black;
-  border: 0;
+  color: var(--offblack);
+  border: none;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 #reset:hover {
@@ -478,20 +479,24 @@ input::-webkit-inner-spin-button {
   }
 
   .decimal-dropDown {
-    margin: auto;
     width: 70%;
+    height: 80px;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
   }
   
   .decimal-dropDown p {
     margin: 0;
+    padding-top: 0;
   }
 
   .form-select {
     width: 100%;
-    margin-bottom:60px;
+  }
+
+  .unit-type h3 {
+    width: 100%;
   }
 
 }
@@ -536,8 +541,8 @@ input::-webkit-inner-spin-button {
   /*converter page*/
   .converters-nav {
     width: 100%;
+    height: 80px;
     margin: auto;
-    margin-bottom: -5%;
   }
 
   .nav-converter-link img {
@@ -547,4 +552,25 @@ input::-webkit-inner-spin-button {
   .nav-converter-link p {
     display: none;
   }
+
+  .converter-box {
+    width: 90%;
+  }
+
+  .decimal-dropDown {
+    width: 80%;
+  }
+
+  .unit-type {
+    width: 80%;
+  }
+
+  .reset-button {
+    width: 80%;
+  }
+
+  #reset {
+    width: 100%;
+  }
+
 }
