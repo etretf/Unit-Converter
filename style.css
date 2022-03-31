@@ -525,6 +525,10 @@ input::-webkit-inner-spin-button {
     font-size: 12pt;
   }
 
+  .nav-items {
+    width: 90%;
+  }
+  
   .banner-items {
     width: 90%;
   }
