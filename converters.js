@@ -6,13 +6,12 @@ window.onload=function() {
 let decimalNum = 3;
 console.log(decimalNum)
 //drop down menu for the decimal values
+//dropdown menu value extraction was referenced from stackoverflow https://stackoverflow.com/questions/10659097/jquery-get-selected-option-from-dropdown
 $(document).ready(function(){
     //jquery will monitor if a decimal value from the dropdown menu was selected
     $(".form-select").change(function () {
         //changing the decimalNum to the decimal value that is selected from the dropdown menu
         decimalNum = $(this).val();
-        console.log("changed");
-        console.log(decimalNum);
         //getting all of the inputs from the html and storing them under changeInputs
         let changeInputs = document.getElementsByClassName("input");
         //looping through all of the input fields
@@ -65,8 +64,6 @@ let year = document.getElementById("year");
 let celsius = document.getElementById("celsius");
 let fahrenheit = document.getElementById("fahrenheit");
 
-
-
 //getting all of the inputs from the html and storing them under changeInputs
 let numInputs = document.getElementsByClassName("input")
 
@@ -79,6 +76,11 @@ numInputs[i].addEventListener("input", conversions);
 
 //conversions functions 
 //function identifies the entered input field id and value and changes the other input fields correspondingly
+/*Section was referenced from several youtube videos
+https://www.youtube.com/watch?v=4GCC5DBh_Pk
+https://www.youtube.com/watch?v=MBSgmji130s
+https://www.youtube.com/watch?v=LWoGu5tSeig
+*/
 function conversions() {
     console.log("conversions");
     //getting the id of the input field that the user has entered input into and storing it as inputId
@@ -359,26 +361,8 @@ function conversions() {
             celsius.value = ((inputValue)*(5/9)-32);
             break;
     }  
-    inputDecimalChange(inputId)
-    
-}
-
-let GetTheme = JSON.parse(localStorage.getItem("PageTheme"));
-console.log(GetTheme);
-    
-if(GetTheme == "dark") {
-    document.body.classList.toggle("dark-mode");
-    document.getElementById("modeSwitch").checked = true;
-    modeSwitch("dark-mode");
-    /*
-    if (location.pathname === "/index.html"){
-        darkModeToggleHomePage();
-        console.log("TIME");
-    }
-    else {
-        darkModeToggleConverterPage();
-    }
-    */
+    //calling function that will change the number of decimal places displayed in the input fields
+    inputDecimalChange(inputId);
 }
 
 //function that will change the number of decimal points displayed in the input fields
@@ -391,73 +375,69 @@ function inputDecimalChange(currentInputId) {
         //checking if the id of the current input fields equal the id of the input field that the user has entered a number into
         if(changeInputDecimal[i].id != currentInputId) {
             //changing the number of decimal places of the input field
+            //format was referenced from stackoverflow. https://stackoverflow.com/questions/14862009/make-an-html-number-input-always-display-2-decimal-places
             changeInputDecimal[i].value = parseFloat(changeInputDecimal[i].value).toFixed(decimalNum);
         }
     }
 }
 
-//event listener will listen for when the reset button is clicked
-//if the button is clicked the resetInputFields function will be called
-//document.getElementById("reset").addEventListener("click", resetInputFields);
-//resetInputFields function will reset all of the input fields
+//light mode dark mode was referenced from youtube https://www.youtube.com/watch?v=-Jt_h91uXkQ
+//getting the last selected theme from local storage
+let getTheme = JSON.parse(localStorage.getItem("PageTheme"));
+//checking if the last selected theme was dark mode
+if(getTheme == "dark") {
+    //toggling a dark-mode class
+    document.body.classList.toggle("dark-mode");
+    //calling function that will style for dark mode
+    modeSwitch("dark-mode");
+}
 
 }
 
+//function that is called when reset button is clicked
+//function will get all inputs fields and clear/reset them
 function resetInputFields() {
     var inputsToClear = document.getElementsByClassName("input");
-    //looping through all  of the input fields
+    //looping through all of the input fields
     for (i=0; i<inputsToClear.length; i++) {
-        //clearing input field
+        //clearing the input field
         inputsToClear[i].value = "";
     }
 }
 
+//light mode dark mode implementation was referenced from youtube https://www.youtube.com/watch?v=-Jt_h91uXkQ
+//toggleMode function will run when dark mode/light mode button in the nav is clicked
+//function toggles between dark and light mode and saves current theme to local storage
 function toggleMode() {
-    console.log("hello");
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-    let theme;
-    
-    if(element.classList.contains("dark-mode")){
-        document.getElementById("modeSwitch").checked = true;
-        modeSwitch("dark-mode")
-        console.log("dark-mode");
-        theme = "dark";
-    }
+    //toggling a dark-mode class to help differentiate the current mode
+    document.body.classList.toggle("dark-mode");
 
+    let theme;
+    //checking if the dark-mode class is in effect. If yes, theme will be set to dark-mode 
+    //styling function will be called
+    if(document.body.classList.contains("dark-mode")){
+        theme = "dark";
+        modeSwitch("dark-mode")
+    }
+    //if the dark-mode class is not in effect. theme will be set to light-mode
+    //styling function will be called
     else{
-        document.getElementById("modeSwitch").checked = false;
         modeSwitch("light-mode") 
-        console.log("light-mode");
         theme = "light";
     }
-    //save to localStorage
 
+    //saving current theme to local storage
     localStorage.setItem("PageTheme", JSON.stringify(theme));
 }
 
+//function that takes in the current theme
+//if theme is "dark-mode", the dark mode styling will occur
+//if theme is "light-mode", the light mode styling will occur
+function modeSwitch(currentTheme) {
 
-/*
-function darkModeToggleHomePage() {
-    document.getElementById("converters").classList.toggle("darkModeConverters");
-    let newh4 = document.querySelectorAll("h4");
-    for (i=0;i<newh4.length;i++){
-        newh4[i].classList.toggle("darkModeh4")
-    }
-    let newlinks = document.getElementsByClassName("converter-link");
-    for (i=0; i<newlinks.length;i++) {
-        newlinks[i].classList.toggle("darkModeConverterLink");
-    }
-}
-
-function darkModeToggleConverterPage() {
-   
-}
-*/
-
-function modeSwitch(currentMode) {
-
-    if (currentMode=="dark-mode") {
+    if (currentTheme=="dark-mode") {
+        //making the light mode/dark mode button stay checked in dark mode
+        document.getElementById("modeSwitch").checked = true;
         //switching colours to darkmode
         document.querySelector(":root").style.setProperty("--navBar","#222831");
         document.querySelector(":root").style.setProperty("--white","#393E46");
@@ -474,8 +454,9 @@ function modeSwitch(currentMode) {
         document.getElementById("volumeIcon").src = "icons/volume-white.png";
         document.getElementById("githubLogo").src = "images/gitHubLogo-darkMode.png";
     }
-
     else {
+        //making the light mode/dark mode button stay checked in light mode
+        document.getElementById("modeSwitch").checked = false;
         //switching colours to lightmode
         document.querySelector(":root").style.setProperty("--navBar","#FC4F1B");
         document.querySelector(":root").style.setProperty("--white","white");
@@ -483,8 +464,6 @@ function modeSwitch(currentMode) {
         document.querySelector(":root").style.setProperty("--offblack","#222831");
         document.querySelector(":root").style.setProperty("--red","#CB3B24");
         document.querySelector(":root").style.setProperty("--iconHover","#E7E7E7");
-
-
         //switching icons to lightmode
         document.getElementById("massIcon").src = "icons/mass-red.png";
         document.getElementById("tempIcon").src = "icons/thermometer-red.png";
