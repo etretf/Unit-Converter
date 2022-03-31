@@ -507,6 +507,7 @@ input::-webkit-inner-spin-button {
   }
   .nav-converter-link p {
     font-size: 2vw;
+    /*font-size: 12px;*/
   }
 }
 
@@ -535,6 +536,7 @@ input::-webkit-inner-spin-button {
 
   .converter-links {
     width: 90%;
+    min-height: 130px;
     justify-content: space-between;
   }
 
@@ -561,12 +563,20 @@ input::-webkit-inner-spin-button {
     width: 90%;
   }
 
+  .converter-section h3 {
+    width: 90%;
+  }
+
   .decimal-dropDown {
     width: 80%;
   }
 
   .unit-type {
     width: 80%;
+  }
+
+  .unit-type h3{
+    width: 100%;
   }
 
   .reset-button {
