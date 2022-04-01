@@ -268,7 +268,7 @@
       padding-right: 5%;
     }
 
-    .navConverterLink:hover {
+    .navConverterLink:not(.selectedNav):hover {
       opacity: 40%;
       transition-duration: 0.25s;
     }
@@ -280,6 +280,10 @@
     .navConverterLink p {
       margin: 10px;
       color: var(--red);
+    }
+
+    .selectedNav img, .selectedNav p{
+      opacity: 50%;
     }
 
     .hiddenIcon {
@@ -459,6 +463,10 @@
     }
 
   /*converter page*/
+    .navConverterLinks {
+      width: 85%;
+    }
+    
     .navConverterLink {
       width: 40px;
     }
@@ -495,8 +503,9 @@
 /*Converter styling for 700px breakpoint*/
 @media screen and (max-width: 700px) {
   .navConverterLinks {
-    width: 90%;
+    width: 95%;
   }
+  
   .navConverterLink p {
     font-size: 2vw;
     /*font-size: 12px;*/
