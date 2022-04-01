@@ -40,7 +40,8 @@
           ><img
             src="images/logo ezpz.png"
             alt="image of logo, link to homepage"
-        /></a>
+          >
+        </a>
         <!--label that contains the night mode/light mode switch-->
         <label class="switch">
           <input type="checkbox" id="modeSwitch" onclick="toggleMode()" />
@@ -61,8 +62,8 @@
               id="massIcon"
               src="icons/mass-red.png"
               alt="image of a scale, link to mass converter page"
-            />
-            <p class="converterTypeDesc">MASS</p>
+            >
+            <p>MASS</p>
           </div>
         </a>
         <!--link that contains the temperature converter link and its elements-->
@@ -73,8 +74,21 @@
               id="tempIcon"
               src="icons/thermometer-red.png"
               alt="image of a thermometer, link to temperature converter page"
-            />
-            <p class="converterTypeDesc">TEMPERATURE</p>
+            >
+            <p>TEMPERATURE</p>
+          </div>
+        </a>
+        <!--link that contains the speed converter link and its elements-->
+        <a class="navConverterLink selectedNav">
+          <!--empty link since adding this icon was a last minute change-->
+          <!--div that contains the elements of the speed converter link-->
+          <div>
+            <img 
+              id="speedIcon" 
+              src="icons/speed-red.png" 
+              alt="image of a speedometer, current tab"
+            >
+            <p>SPEED</p>
           </div>
         </a>
         <!--link that contains the length converter link and its elements-->
@@ -85,8 +99,8 @@
               id="lengthIcon"
               src="icons/length-red.png"
               alt="image of a ruler, link to length converter page"
-            />
-            <p class="">LENGTH</p>
+            >
+            <p>LENGTH</p>
           </div>
         </a>
         <!--link that contains the time converter link and its elements-->
@@ -97,8 +111,8 @@
               id="timeIcon"
               src="icons/time-red.png"
               alt="image of a clock, link to time converter page"
-            />
-            <p class="converterTypeDesc">TIME</p>
+            >
+            <p>TIME</p>
           </div>
         </a>
         <!--link that contains the volume converter link and its elements-->
@@ -109,8 +123,8 @@
               id="volumeIcon"
               src="icons/volume-red.png"
               alt="image of a beaker, link to volume converter page"
-            />
-            <p class="converterTypeDesc">VOLUME</p>
+            >
+            <p>VOLUME</p>
           </div>
         </a>
         <!--hidden icon so js works properly when changing icon sources\
