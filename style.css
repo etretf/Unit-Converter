@@ -9,6 +9,9 @@
   padding: 0;
 }
 
+/*creating css colour variables which contain colour codes*/
+/*useful for when switching between light mode and dark mode*/
+/*learned about css variables from w3schools https://www.w3schools.com/css/css3_variables.asp*/
 :root {
   --navBar: #fc4f1b;
   --white: white;
@@ -20,12 +23,13 @@
 }
 
 
-/*styling the banner header*/
+/*styling all h1 headers on the website*/
   h1 {
     font-family: "Ropa Sans", sans-serif;
     font-size: 80px;
   }
 
+/*styling all h2 headers on the website*/
   h2 {
     text-align: center;
     font-family: "Ropa Sans", sans-serif;
@@ -33,6 +37,7 @@
     color: var(--offblack);
   }
 
+/*styling all h4 headers on the website*/
   h4 {
     font-family: "Roboto", sans-serif;
     font-size: 14pt;
@@ -40,7 +45,10 @@
     margin-top: 25px;
   }
   
-/*logo and button*/
+
+/*-----Main nav bar for all of the pages-----*/
+
+/*styling the nav tag*/
   nav {
     background-color: var(--navBar);
     width: 100%;
@@ -49,6 +57,7 @@
     align-items: center;
   }
 
+/*styling the div that contains all of the nav elements*/
   .navItems {
     width: 78%;
     max-width: 1440px;
@@ -58,12 +67,13 @@
     justify-content: space-between;
   }
 
+/*styling the EZPZ logo*/
   nav img {
     height: 50px;
   }
 
 /*DARK-LIGHT MODE TOGGLE*/
-/*referenced from w3schools*/
+/*referenced from w3schools https://www.w3schools.com/howto/howto_css_switch.asp*/
   .switch {
     position: relative;
     display: inline-block;
@@ -114,98 +124,116 @@
     border-radius: 50%;
   }
 
-/*Homepage styling*/
-  /*styling banner container*/
-    .banner {
-      width: 100%;
-      height: 100vh;
-      background: linear-gradient(#fc4f1b, #f7b132);
-      background-image: url(images/backgroud\ copy.jpg);
-      background-size: cover;
-      padding-top: 20vh;
-    }
 
-    /*styling the elements that are on the banner*/
-    .bannerItems {
-      width: 78%;
-      max-width: 1440px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
 
-    .bannerItems p {
-      font-family: "Roboto", sans-serif;
-      font-size: 18pt;
-    }
+/* Homepage */
 
-    #bannerBtn {
-      text-decoration: none;
-      text-align: center;
-      background-color: var(--offwhite);
-      font-family: "Ropa Sans", sans-serif;
-      font-size: 18pt;
-      color: var(--offblack);
-      padding: 15px;
-      width: 200px;
-      margin-top: 50px;
-      border-radius: 10px;
-    }
+/*-----banner section-----*/
 
-    #bannerBtn:hover {
-      background-color: var(--iconHover);
-      color: var(--offblack);
-      transition-duration: 0.5s;
-    }
+/*styling the banner section*/
+  .banner {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#fc4f1b, #f7b132);
+    background-image: url(images/backgroud\ copy.jpg);
+    background-size: cover;
+    padding-top: 20vh;
+  }
 
-  /*CONVERTER BUTTONS*/
-    .converters {
-      min-height: 100vh;
-      padding: 70px 0;
-      background-color: var(--offwhite);
-    }
+/*styling div that contains all of the banner elements*/
+  .bannerItems {
+    width: 78%;
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    .converterLinks {
-      width: 78%;
-      max-width: 1440px;
-      margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-    }
+/*styling the converter description on the banner*/
+  .bannerItems p {
+    font-family: "Roboto", sans-serif;
+    font-size: 18pt;
+  }
 
-    .converterLink {
-      text-decoration: none;
-      min-width: 200px;
-      width: 30%;
-      height: 170px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      text-align: center;
-      margin: 30px 0;
-      padding: 40px;
-      border-radius: 10px;
-      background-color: var(--white);
-      color: var(--red);
-      font-weight: bold;
-    }
+/*styling the banner button*/
+  #bannerBtn {
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--offwhite);
+    font-family: "Ropa Sans", sans-serif;
+    font-size: 18pt;
+    color: var(--offblack);
+    padding: 15px;
+    width: 200px;
+    margin-top: 50px;
+    border-radius: 10px;
+  }
 
-    .converterLink:hover {
-      background-color: var(--iconHover);
-      color: var(--red);
-      transition-duration: 0.25s;
-    }
+/*styling the banner button on hover*/
+  #bannerBtn:hover {
+    background-color: var(--iconHover);
+    color: var(--offblack);
+    transition-duration: 0.5s;
+  }
 
-    .converterLink img {
-      height: 60px;
-    }
 
-/*Footer*/
+/*-----converters section-----*/
+
+/*styling the converters section*/
+  .converters {
+    min-height: 100vh;
+    padding: 70px 0;
+    background-color: var(--offwhite);
+  }
+
+/*styling all of the converter links*/
+  .converterLinks {
+    width: 78%;
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+/*styling each individual converter link*/
+  .converterLink {
+    text-decoration: none;
+    min-width: 200px;
+    width: 30%;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: 30px 0;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: var(--white);
+    color: var(--red);
+    font-weight: bold;
+  }
+
+/*styling the icons in the converter links*/
+  .converterLink img {
+    height: 60px;
+  }
+
+/*styling each individual converter link on hover*/
+  .converterLink:hover {
+    background-color: var(--iconHover);
+    color: var(--red);
+    transition-duration: 0.25s;
+  }
+
+    
+/*-----footer section-----*/
+
+/*styling the footer section*/
   .footer {
     height: 150px;
     background-color: var(--white);
@@ -214,6 +242,7 @@
     align-content: center;
   }
 
+/*styling the div that contains all of the footer elements*/
   .footerItems {
     width: 78%;
     margin: auto;
@@ -223,27 +252,38 @@
     font-family: "Ropa Sans", sans-serif;
   }
 
+/*styling the div that contains all of the footer elements on hover*/
   .footerItems:hover {
     opacity: 70%;
   }
 
+/*styling the link that links to our gitHub*/
   .footerItems a {
     text-decoration: none;
     color: var(--offblack);
   }
 
+/*styling the gitHub logo*/
   #githubLogo {
     width: 50px;
   }
 
-/*Converter page styling*/
-/*Converter navs*/
+
+
+
+
+/*Converter page */
+
+/*-----converters nav-----*/
+
+/*styling the section that contains the nav for the converters*/
     .convertersNav {
       height: 125px;
       background-color: var(--white);
       width: 100%;
     }
 
+/*styling the div that contains all of the converter nav links*/
     .navConverterLinks {
       width: 70%;
       max-width: 1440px;
@@ -257,6 +297,7 @@
       flex-wrap: wrap;
     }
 
+/*styling each converter link*/
     .navConverterLink {
       text-align: center;
       text-decoration: none;
@@ -268,25 +309,32 @@
       padding-right: 5%;
     }
 
+/*styling each converter nav link on hover*/
     .navConverterLink:hover {
       opacity: 40%;
       transition-duration: 0.25s;
     }
 
+/*styling each converter link icon*/
     .navConverterLink img {
       height: 40px;
     }
 
+/*styling each converter link description*/
     .navConverterLink p {
       margin: 10px;
       color: var(--red);
     }
 
+/*styling the hidden icon*/
     .hiddenIcon {
       display: none;
     }
 
-  /*main section*/
+
+/*-----main section-----*/
+
+/*styling the main section that contains the converter*/
     .converterSection {
       background-color: var(--offwhite);
       font-family: "Ropa Sans", sans-serif;
@@ -295,6 +343,7 @@
       min-height: 100vh;
     }
 
+/*styling the title of the converter*/
     .converterSection h3 {
       padding-top: 20px;
       font-size: medium;
@@ -304,6 +353,7 @@
       margin: auto;
     }
 
+/*styling the div that contains the interactive converter elements*/
     .converterBox {
       width: 60%;
       max-width: 810px;
@@ -314,7 +364,7 @@
       padding-top: 40px;
     }
 
-  /*DECIMAL DROPDOWN*/
+/*styling the div that contains the decimal dropdown*/
     .decimalDropdown {
       margin: auto;
       width: 70%;
@@ -325,11 +375,13 @@
       align-content: center;
     }
 
+/*styling the decimal dropdown description text*/
     .decimalDropdown p {
       margin: 0 10px;
       padding: 2% 0;
     }
 
+/*styling the decimal dropdown select menu*/
     .form-select {
       width: 60px;
       background-color: rgb(245, 245, 245);
@@ -337,12 +389,13 @@
       border: 1px solid #222831;
     }
 
-    .onevALUE {
+/*styling the values of the decimal dropdown select menu*/
+    .decimalValue {
       background-color: var(--offwhite);
       color: var(--offblack);
     }
 
-  /*CONNVERSION INPUTS*/
+/*styling the div that contain an input field and its description*/
     .unitType {
       width: 70%;
       height: 80px;
@@ -351,10 +404,12 @@
       flex-wrap: wrap;
     }
 
+/*styling the description of each input field*/
     .unitType h3 {
       width: 100%;
     }
 
+/*styling the input field*/
     .input {
       width: 90%;
       outline-style: none;
@@ -367,6 +422,19 @@
       color: var(--offblack);
     }
 
+/*styling the input field on focus*/
+    .input:focus {
+      border-bottom: 2px solid #cb3b24;
+    }
+
+/*styling the input field to not display the up and down arrows*/
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    
+/*styling the input field unit*/
     .unitType p {
       width: 10%;
       height: 30px; /*40px*/
@@ -375,22 +443,13 @@
       font-size: 14pt;
     }
 
-    .input:focus {
-      border-bottom: 2px solid #cb3b24;
-    }
-
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-
-  /*Reset button*/
+/*styling the div that contains the reset button*/
     .resetBtn {
       margin: 5% auto auto auto;
       width: 70%;
     }
 
+/*styling the reset button*/
     #reset {
       background-color: var(--iconHover);
       color: var(--offblack);
@@ -399,97 +458,104 @@
       padding: 10px 20px;
     }
 
+/*styling the reset button on hover*/
     #reset:hover {
       background-color: #cb3b24;
       color: #f2f2f2;
       transition-duration: 0.25s;
     }
 
-/*homepage for screenwidth under 900px*/
+
+
+/*styling for screen widths of 900px or less*/
 @media screen and (max-width: 900px) {
-  /*HOMEPAGE BANNER*/
-    h1 {
-      font-size: 48pt;
-    }
+/*styling all of the h1 headers*/
+  h1 {
+    font-size: 48pt;
+  }
 
-    h2 {
-      font-size: 32pt;
-      margin: 40px auto;
-    }
+/*styling all of the h2 headers*/
+  h2 {
+    font-size: 32pt;
+    margin: 40px auto;
+  }
 
-    h4 {
-      font-size: 16pt;
-    }
+/*styling all of the h4 headers*/
+  h4 {
+    font-size: 16pt;
+  }
 
-  /*styling the elements that are on the banner*/
-    .bannerItems {
-      width: 80%;
-      align-items: center;
-      text-align: center;
-    }
+/* Homepage */
 
-    .bannerItems p {
-      font-size: 18pt;
-    }
+/*styling the div that contains all of the banner items*/
+  .bannerItems {
+    width: 80%;
+    align-items: center;
+    text-align: center;
+  }
 
-    .converters {
-      min-height: 100vh;
-      padding: 40px 0;
-      background-color: var(--offwhite);
-    }
+/*styling the unit converter description on the banner*/
+  .bannerItems p {
+    font-size: 18pt;
+  }
 
-    .converterLinks {
-      width: 80%;
-      justify-content: space-between;
-    }
+/*styling the converters section*/
+  .converters {
+    padding: 40px 0;
+  }
 
-    .converterLink {
-      min-width: 100px;
-      width: 47%;
-      height: auto;
-      min-height: 150px;
-      margin: 15px 0;
-      padding: 30px;
-    }
+/*styling the converter links*/
+  .converterLinks {
+    width: 80%;
+  }
 
-    .converterLink:hover {
-      background-color: var(--iconHover);
-      color: var(--red);
-      transition-duration: 0.25s;
-    }
+  .converterLink {
+    min-width: 100px;
+    width: 47%;
+    height: auto;
+    min-height: 150px;
+    margin: 15px 0;
+    padding: 30px;
+  }
 
-  /*converter page*/
-    .navConverterLink {
-      width: 40px;
-    }
+  .converterLink:hover {
+    background-color: var(--iconHover);
+    color: var(--red);
+    transition-duration: 0.25s;
+  }
 
-    .converterBox {
-      width: 80%;
-    }
-    .converterSection h3 {
-      width: 80%;
-    }
+/*converter page*/
+  .navConverterLink {
+    width: 40px;
+  }
 
-    .decimalDropdown {
-      width: 70%;
-      height: 80px;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-content: center;
-    }
-    
-    .decimalDropdown p {
-      margin: 0;
-      padding-top: 0;
-    }
+  .converterBox {
+    width: 80%;
+  }
+  .converterSection h3 {
+    width: 80%;
+  }
 
-    .form-select {
-      width: 100%;
-    }
+  .decimalDropdown {
+    width: 70%;
+    height: 80px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+  }
+  
+  .decimalDropdown p {
+    margin: 0;
+    padding-top: 0;
+  }
 
-    .unitType h3 {
-      width: 100%;
-    }
+  .form-select {
+    width: 100%;
+  }
+
+  .unitType h3 {
+    width: 100%;
+  }
 }
 
 /*Converter styling for 700px breakpoint*/
@@ -505,80 +571,99 @@
 
 /*homepage for screenwidth under 500px*/
 @media screen and (max-width: 500px) {
-  /*HOMEPAGE BANNER*/
-    h1 {
-      font-size: 36pt;
-    }
+/*styling all of the h1 headers*/
+  h1 {
+    font-size: 36pt;
+  }
 
-    h2 {
-      font-size: 24pt;
-      margin: 40px auto;
-    }
+/*styling all of the h2 headers*/
+  h2 {
+    font-size: 24pt;
+    margin: 40px auto;
+  }
 
-    h4 {
-      font-size: 12pt;
-    }
+/*styling all of the h4 headers*/
+  h4 {
+    font-size: 12pt;
+  }
 
-  /*header with logo and toggle*/
-    .navItems {
-      width: 90%;
-    }
-    
-    .bannerItems {
-      width: 90%;
-    }
+/*styling the div that contains the nav elements*/
+  .navItems {
+    width: 90%;
+  }
+  
 
-    .converterLinks {
-      width: 90%;
-      min-height: 130px;
-      justify-content: space-between;
-    }
+/* Homepage */
 
-    .converterLink img {
-      height: 50px;
-    }
+/*styling the div that contains the banner items*/
+  .bannerItems {
+    width: 90%;
+  }
 
-  /*converter page*/
-    .convertersNav {
-      width: 100%;
-      height: 80px;
-      margin: auto;
-    }
+/*styling the converter links*/
+  .converterLinks {
+    width: 90%;
+    min-height: 130px;
+    justify-content: space-between;
+  }
 
-    .navConverterLink img {
-      height: 35px;
-    }
+/*styling the converter link icons*/
+  .converterLink img {
+    height: 50px;
+  }
 
-    .navConverterLink p {
-      display: none;
-    }
 
-    .converterBox {
-      width: 90%;
-    }
+/*converter page*/
 
-    .converterSection h3 {
-      width: 90%;
-    }
+/*styling the converter nav*/
+  .convertersNav {
+    width: 100%;
+    height: 80px;
+    margin: auto;
+  }
 
-    .decimalDropdown {
-      width: 80%;
-    }
+/*styling the converter link icons*/
+  .navConverterLink img {
+    height: 35px;
+  }
 
-    .unitType {
-      width: 80%;
-    }
+/*styling the converter link descriptions*/
+  .navConverterLink p {
+    display: none;
+  }
 
-    .unitType h3{
-      width: 100%;
-    }
+/*styling the div that contains interactive converter elements*/
+  .converterBox {
+    width: 90%;
+  }
 
-    .resetBtn {
-      width: 80%;
-    }
+/*styling the converter title*/
+  .converterSection h3 {
+    width: 90%;
+  }
 
-    #reset {
-      width: 100%;
-    }
+/*styling the div that contains the decimal dropdown*/
+  .decimalDropdown {
+    width: 80%;
+  }
 
+/*styling the div that contains the input field and its description*/
+  .unitType {
+    width: 80%;
+  }
+
+/*styling the input field description*/
+  .unitType h3{
+    width: 100%;
+  }
+
+/*styling the div that contains the reset button*/
+  .resetBtn {
+    width: 80%;
+  }
+
+/*styling the reset button*/
+  #reset {
+    width: 100%;
+  }
 }
