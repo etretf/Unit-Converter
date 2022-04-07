@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Mass converter</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,182 +9,200 @@
     <!--linking fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Ropa+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Ropa+Sans:ital@0;1&display=swap" 
+      rel="stylesheet"
+    >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" 
+      rel="stylesheet"
+    >
     <!-- Bootstrap link to CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+      crossorigin="anonymous"
+    >
     <!--linking the css stylesheet to the html file-->
     <link rel="stylesheet" href="style.css"> 
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-</head>
+  </head>
 
-<body>
-  <!--nav that contains the main nav with the logo and night mode/light mode switch-->
-  <nav>
-    <!--div that contains all of the nav items-->
-    <div class="navItems">
-      <a href="index.html"><img src="images/logo ezpz.png" alt="image of EZPZ logo, link to homepage"></a>
-      <!--label that contains the night mode/light mode switch-->
-      <label class="switch">
-        <input type="checkbox" id="modeSwitch" onclick="toggleMode()">
-        <span class="slider round"></span>
-      </label>
-    </div>
-  </nav>
-
-  <!--section that contains the nav that contains links to different converters-->
-  <section class="convertersNav">
-    <!--div that contains all of the links that link to their corresponding converters-->
-    <div class="navConverterLinks">
-      <!--link that contains the temperature converter link and its elements-->
-      <a href="temperatureConverter.html"  class="navConverterLink">
-        <!--div that contains the elements of the temperature converter link-->
-        <div>
-          <img
-            id="tempIcon" 
-            src="icons/thermometer-red.png"
-            alt="image of a thermometer, link to temperature converter page"
-          >
-          <p>TEMPERATURE</p>
-        </div>
-      </a>
-      <!--link that contains the speed converter link and its elements-->
-      <a href="speedConverter.html" class="navConverterLink">
-        <!--div that contains the elements of the speed converter link-->
-        <div>
-          <img
-            id="speedIcon"
-            src="icons/speed-red.png"
-            alt="image of a speedometer, link to speed converter page"
-          >
-          <p>SPEED</p>
-        </div>
-      </a>
-      <!--link that contains the length converter link and its elements-->
-      <a href="distanceConverter.html" class="navConverterLink">
-        <!--div that contains the elements of the length converter link-->
-        <div>
+  <body>
+    <!--nav that contains the main nav with the logo and night mode/light mode switch-->
+    <nav>
+      <!--div that contains all of the nav items-->
+      <div class="navItems">
+        <a href="index.html">
           <img 
-            id="lengthIcon" 
-            src="icons/length-red.png" 
-            alt="image of a ruler, link to length converter page"
+            src="images/logo ezpz.png" 
+            alt="image of EZPZ logo, link to homepage"
           >
-          <p>LENGTH</p>
-        </div>
-      </a>
-      <!--link that contains the time converter link and its elements-->
-      <a href="timeConverter.html" class="navConverterLink">
-        <!--div that contains the elements of the time converter link-->
-        <div>
-          <img 
-            id="timeIcon" 
-            src="icons/time-red.png" 
-            alt="image of a clock, link to time converter page"
+        </a>
+        <!--label that contains the night mode/light mode switch-->
+        <label class="switch">
+          <input 
+            type="checkbox" 
+            id="modeSwitch" 
+            onclick="toggleMode()"
           >
-          <p>TIME</p>
-        </div>
-      </a>
-      <!--link that contains the volume converter link and its elements-->
-      <a href="volumeConverter.html" class="navConverterLink">
-        <!--div that contains the elements of the volume converter link-->
-        <div>
-          <img 
-            id="volumeIcon" 
-            src="icons/volume-red.png" 
-            alt="image of a beaker, link to volume converter page"
-          >
-          <p>VOLUME</p>
-        </div>
-      </a>
-      <!--hidden icon so js works properly when changing icon sources\
-        Icon is from the converter that is currently displayed on the page(mass)-->
-      <div class="hiddenIcon">
-        <img id="massIcon" src="icons/mass-red.png" alt="image of weight">
+          <span class="slider round"></span>
+        </label>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!--section that contains unique converter page elements-->
-  <section class="converterSection">
-    <h3>MASS CONVERTER</h3>
-    <!--div that contains the interactive converter elements-->
-    <div class="converterBox">
-      <!--div that contains the dropdown menu that lets user pick the decimal point amount for the answer display-->
-      <!--chose to use select menu from bootstrap to be more efficient and avoid styling-->
-      <div class="decimalDropdown">
-        <p>Decimal Places</p>
+    <!--section that contains the nav that contains links to different converters-->
+    <section class="convertersNav">
+      <!--div that contains all of the links that link to their corresponding converters-->
+      <div class="navConverterLinks">
+        <!--link that contains the temperature converter link and its elements-->
+        <a href="temperatureConverter.html"  class="navConverterLink">
+          <!--div that contains the elements of the temperature converter link-->
+          <div>
+            <img
+              id="tempIcon" 
+              src="icons/thermometer-red.png"
+              alt="image of a thermometer, link to temperature converter page"
+            >
+            <p>TEMPERATURE</p>
+          </div>
+        </a>
+        <!--link that contains the speed converter link and its elements-->
+        <a href="speedConverter.html" class="navConverterLink">
+          <!--div that contains the elements of the speed converter link-->
+          <div>
+            <img
+              id="speedIcon"
+              src="icons/speed-red.png"
+              alt="image of a speedometer, link to speed converter page"
+            >
+            <p>SPEED</p>
+          </div>
+        </a>
+        <!--link that contains the length converter link and its elements-->
+        <a href="distanceConverter.html" class="navConverterLink">
+          <!--div that contains the elements of the length converter link-->
+          <div>
+            <img 
+              id="lengthIcon" 
+              src="icons/length-red.png" 
+              alt="image of a ruler, link to length converter page"
+            >
+            <p>LENGTH</p>
+          </div>
+        </a>
+        <!--link that contains the time converter link and its elements-->
+        <a href="timeConverter.html" class="navConverterLink">
+          <!--div that contains the elements of the time converter link-->
+          <div>
+            <img 
+              id="timeIcon" 
+              src="icons/time-red.png" 
+              alt="image of a clock, link to time converter page"
+            >
+            <p>TIME</p>
+          </div>
+        </a>
+        <!--link that contains the volume converter link and its elements-->
+        <a href="volumeConverter.html" class="navConverterLink">
+          <!--div that contains the elements of the volume converter link-->
+          <div>
+            <img 
+              id="volumeIcon" 
+              src="icons/volume-red.png" 
+              alt="image of a beaker, link to volume converter page"
+            >
+            <p>VOLUME</p>
+          </div>
+        </a>
+        <!--hidden icon so js works properly when changing icon sources\
+          Icon is from the converter that is currently displayed on the page(mass)-->
+        <div class="hiddenIcon">
+          <img id="massIcon" src="icons/mass-red.png" alt="image of weight">
+        </div>
+      </div>
+    </section>
+
+    <!--section that contains unique converter page elements-->
+    <section class="converterSection">
+      <h3>MASS CONVERTER</h3>
+      <!--div that contains the interactive converter elements-->
+      <div class="converterBox">
+        <!--div that contains the dropdown menu that lets user pick the decimal point amount for the answer display-->
         <!--chose to use select menu from bootstrap to be more efficient and avoid styling-->
-        <select class="form-select">
-          <option class="decimalValue" value="0">0</option>
-          <option class="decimalValue" value="1">1</option>
-          <option class="decimalValue" value="2">2</option>
-          <option class="decimalValue" value="3" selected>3</option>
-          <option class="decimalValue" value="4">4</option>
-          <option class="decimalValue" value="5">5</option>
-          <option class="decimalValue" value="6">6</option>
-          <option class="decimalValue" value="7">7</option>
-          <option class="decimalValue" value="8">8</option>
-          <option class="decimalValue" value="9">9</option>
-        </select>
+        <div class="decimalDropdown">
+          <p>Decimal Places</p>
+          <!--chose to use select menu from bootstrap to be more efficient and avoid styling-->
+          <select class="form-select">
+            <option class="decimalValue" value="0">0</option>
+            <option class="decimalValue" value="1">1</option>
+            <option class="decimalValue" value="2">2</option>
+            <option class="decimalValue" value="3" selected>3</option>
+            <option class="decimalValue" value="4">4</option>
+            <option class="decimalValue" value="5">5</option>
+            <option class="decimalValue" value="6">6</option>
+            <option class="decimalValue" value="7">7</option>
+            <option class="decimalValue" value="8">8</option>
+            <option class="decimalValue" value="9">9</option>
+          </select>
+        </div>
+
+        <!--div that contains all of the input boxes-->
+        <div class="inputBoxes">
+          <!--div that contains the grams input box-->
+          <div class="unitType">
+            <h3>Grams</h3>
+            <input type="number" id="grams" class="input">
+            <p>g</p>
+          </div>
+          <!--div that contains the kilograms input box-->
+          <div class="unitType">
+            <h3>Kilograms</h3>
+            <input type="number" id="kilograms" class="input">
+            <p>kg</p>
+          </div>
+          <!--div that contains the tons input box-->
+          <div class="unitType">
+            <h3>Tons</h3>
+            <input type="number" id="tons" class="input">
+            <p>t</p>
+          </div>
+          <!--div that contains the pounds input box-->
+          <div class="unitType">
+            <h3>Pounds</h3>
+            <input type="number" id="pounds" class="input">
+            <p>lb</p>
+          </div>
+          <!--div that contains the ounces input box-->
+          <div class="unitType">
+            <h3>Ounces</h3>
+            <input type="number" id="ounces" class="input">
+            <p>oz</p>
+          </div>
+        </div>
+        
+        <!--div that contains the reset button which resets/clears all of the values in the input boxes-->
+        <div class="resetBtn">
+          <button id="reset" onclick="resetInputFields()">Reset</button>
+        </div>
       </div>
+    </section>
 
-      <!--div that contains all of the input boxes-->
-      <div class="inputBoxes">
-        <!--div that contains the grams input box-->
-        <div class="unitType">
-          <h3>Grams</h3>
-          <input type="number" id="grams" class="input">
-          <p>g</p>
-        </div>
-        <!--div that contains the kilograms input box-->
-        <div class="unitType">
-          <h3>Kilograms</h3>
-          <input type="number" id="kilograms" class="input">
-          <p>kg</p>
-        </div>
-        <!--div that contains the tons input box-->
-        <div class="unitType">
-          <h3>Tons</h3>
-          <input type="number" id="tons" class="input">
-          <p>t</p>
-        </div>
-        <!--div that contains the pounds input box-->
-        <div class="unitType">
-          <h3>Pounds</h3>
-          <input type="number" id="pounds" class="input">
-          <p>lb</p>
-        </div>
-        <!--div that contains the ounces input box-->
-        <div class="unitType">
-          <h3>Ounces</h3>
-          <input type="number" id="ounces" class="input">
-          <p>oz</p>
-        </div>
+    <!--section that contains the footer and its elements-->
+    <section class="footer">
+      <div class="footerItems">
+        <!--link to the github where our group collaborated on the converter-->
+        <a href="https://github.com/etretf/Unit-Converter" target="_blank"> 
+          <img id="githubLogo" src="images/gitHubLogo-lightMode.png" alt="image of Github logo">
+          <p>View our Github</p>
+        </a>
       </div>
-      
-      <!--div that contains the reset button which resets/clears all of the values in the input boxes-->
-      <div class="resetBtn">
-        <button id="reset" onclick="resetInputFields()">Reset</button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!--section that contains the footer and its elements-->
-  <section class="footer">
-    <div class="footerItems">
-      <!--link to the github where our group collaborated on the converter-->
-      <a href="https://github.com/etretf/Unit-Converter" target="_blank"> 
-        <img id="githubLogo" src="images/gitHubLogo-lightMode.png" alt="image of Github logo">
-        <p>View our Github</p>
-      </a>
-    </div>
-  </section>
+    <!--linking the js to the html file-->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="converters.js"></script>
 
-  <!--linking the js to the html file-->
-  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-  <script src="converters.js"></script>
-
-</body>
+  </body>
 </html>
